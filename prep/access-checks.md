@@ -10,7 +10,13 @@ A check costs 3 Groq + 2 OpenRouter calls, counted outside the 100-cell base bat
 | Date | Member | Local checks | Models OK | KO details (model id, HTTP status, message) | Remaining allowance noted |
 |---|---|---|---|---|---|
 | 2026-10-16 | Manal Hassan | 4/4 OK (python 3.13.9, db sha256 0077e235…3398fec2, sqlite3 3.51.0, csv) | 0/5 | Groq x3 (gpt-oss-120b, gpt-oss-20b, qwen3.8-27b): HTTP 401 `invalid_api_key`. OpenRouter x2 (north-mini-code:free, dots-3-note-preview:free): HTTP 401 `Missing Authentication header` | n/a (requests rejected at authentication) |
+| 2026-10-16 | Manal Hassan | 4/4 OK | 2/5 | OpenRouter north-mini-code:free and dots-3-note-preview:free: OK. Groq x3: HTTP 401 `invalid_api_key` | 2 OpenRouter calls consumed; Groq 0 (rejected) |
 
 Attempt 1 analysis (2026-10-16). *Observation:* Groq received a key and rejected it; OpenRouter received no key.
 *Hypothesis:* the Groq variable held a revoked or mistyped key (the first key was revoked after being exposed in a chat),
 and `OPENROUTER_API_KEY` was not set in that shell. *Action:* recreate both keys, re-export, check prefix/length, re-run.
+
+Attempt 2 analysis (2026-10-16). *Observation:* a previous run showed both variables holding a placeholder text
+(prefix `nouv…`, checked by prefix/length only, keys never displayed); after re-entering the keys with `read -s`,
+OpenRouter passes, Groq still returns 401 `invalid_api_key`. *Hypothesis:* the Groq key entered is the revoked one
+or was miscopied. *Action:* create a new Groq key, re-enter it, re-run once.
