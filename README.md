@@ -85,7 +85,7 @@ Windows PowerShell: use `python` instead of `python3`, `.venv\Scripts\Activate.p
 | Step | Status |
 |---|---|
 | Preparation (kit, venv, integrity, offline demo) | done 2026-10-16 |
-| Access check 5/5 models | TODO — needs each member's own keys |
+| Access check 5/5 models | Manal Hassan: 5/5 OK on 2026-10-16 (3rd attempt, see `prep/access-checks.md`); other members TODO |
 | TD 1 (21 Oct) | not started — draft references ready in `prep/` |
 | TD 2 (18 Nov) | not started |
 | TD 3 (11 Dec) | not started |
