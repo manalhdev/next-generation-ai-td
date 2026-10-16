@@ -16,7 +16,7 @@ things — do them, and when you can't, guide me." Followed by the two instructo
   report draft and `prep/draft_references.py`.
 
 **Decisions:**
-- `prep/draft_references.py` writes the 20 draft queries to `prep/draft-reference-td1.csv`, **not** to
+- `prep/draft_references.py` writes the 20 draft queries to `prep/draft-reference-td1.csv` (git-ignored, so draft values are not public), **not** to
   `reference-td1.csv`: the protocol requires each reference to be written and independently checked by
   members during TD 1. The drafts are a starting point to compare against.
 - Completed age is computed as year difference minus 1 when the month-day of the day is before the

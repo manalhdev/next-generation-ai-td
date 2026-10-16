@@ -26,3 +26,6 @@ Thumbs.db
 # Local download / extraction folders (kept outside the repository)
 _download/
 *.zip
+
+# Draft reference values: regenerate locally with prep/draft_references.py (not published)
+prep/draft-reference-td1.csv
