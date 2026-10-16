@@ -11,7 +11,9 @@ Session: 21 October 2026. Pack 2026-10-14-students-1. Sub-group: TODO. Members: 
 | 2026-10-16 | Manal Hassan | Downloaded kit 2026-10-14, venv + `requests`, `verify-data.py` → `"ok": true` | [README](../README.md) |
 | 2026-10-16 | Manal Hassan | Offline demo run (**simulated** models, not real calls) | [prep/demo/](../prep/demo/) |
 | 2026-10-16 | Manal Hassan (AI-assisted) | Draft of the 20 reference queries, SQL vs CSV cross-check: 20/20 agree | [prep/draft_references.py](../prep/draft_references.py) (values regenerated locally, not published), [prompts-ai-assistance.md](../prompts-ai-assistance.md) |
+| 2026-10-16 | Manal Hassan | Moodle « TD1 Preparation Check » answered | Moodle |
 | 2026-10-16 | Manal Hassan | `check_access.py`: 0/5 (HTTP 401, wrong/empty keys), then 2/5 (Groq 401), then **5/5 OK** | [prep/access-checks.md](../prep/access-checks.md) |
+| 2026-10-16 | Manal Hassan | Public repository created and pushed: https://github.com/manalhdev/next-generation-ai-td | this repository |
 
 Model availability changes observed: the free Ling route of the earlier kit was replaced by
 `cohere/north-mini-code:free` in the 14 October kit (instructor message of 15 October). TODO: our own observations.
