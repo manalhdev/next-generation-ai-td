@@ -1,0 +1,1 @@
+SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents FROM orders o JOIN product p ON p.product_id = o.product_id JOIN customers c ON c.customer_id = o.customer_id WHERE o.product_id IN ('a', 'b', 'c') AND 2026 - CAST(substr(c.birth_date, 1, 4) AS INTEGER) - ('09-25' < substr(c.birth_date, 6, 5)) = 25
