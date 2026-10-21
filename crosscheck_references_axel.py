@@ -1,7 +1,7 @@
-"""TD 1 - Step 1, my share: write C02, C13, C14; cross-check C08, C09, C11.
+"""TD 1 - Step 1 (Axel): compute C02, C13, C14 and cross-check C08, C09, C11.
 
 Usage (from the kit-td1 folder, venv activated):
-    python3 step1_mes_questions.py          # Windows: python step1_mes_questions.py
+    python3 crosscheck_references_axel.py          # Windows: python crosscheck_references_axel.py
 
 For every question, three computations that must agree:
   A. the reference SQL (completed-age formula), run on data/boutique.sqlite read-only;
