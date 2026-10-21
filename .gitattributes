@@ -1,0 +1,4 @@
+*.csv -text
+*.sql -text
+*.json -text
+*.jsonl -text
