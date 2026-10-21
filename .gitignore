@@ -29,3 +29,11 @@ _download/
 
 # Draft reference values: regenerate locally with prep/draft_references.py (not published)
 prep/draft-reference-td1.csv
+
+# Template of the environment file is versioned, the real one never is
+!.env.example
+
+# Local AI-assistant configuration
+CLAUDE.md
+AGENTS.md
+.claude/
