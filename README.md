@@ -4,17 +4,18 @@ ESILV, Data & AI, year 4. Module *Next-Generation AI* (Trustworthy Generative AI
 
 ## Sub-group
 
-- Sub-group: TODO
-- Members: Manal Hassan, TODO
+- Sub-group: TODO (number given by the instructor)
+- Members (GitHub accounts): manalhdev (Manal Hassan), axel12334556, ines729, Marieseka, TasB (TazBrks), Daiki4529, lorentejla
 
 | Role (TD 1) | Model | Member |
 |---|---|---|
-| A | `groq:openai/gpt-oss-120b` | TODO |
-| B | `groq:openai/gpt-oss-20b` | TODO |
-| C | `openrouter:cohere/north-mini-code:free` | TODO |
-| D | `groq:qwen/qwen3.8-27b` | TODO |
-| E | `openrouter:dots-studio/dots-3-note-preview:free` | TODO |
-| F-H | cross-check, traces, summaries | TODO |
+| A | `groq:openai/gpt-oss-120b` | axel12334556 |
+| B | `groq:openai/gpt-oss-20b` | ines729 |
+| C | `openrouter:cohere/north-mini-code:free` | manalhdev (Manal Hassan) |
+| D | `groq:qwen/qwen3.8-27b` | Marieseka |
+| E | `openrouter:dots-studio/dots-3-note-preview:free` | TasB |
+| F | cross-check of references, trace consolidation | Daiki4529 |
+| G | cross-check of references, five-model summary | lorentejla |
 
 ## Environment
 
