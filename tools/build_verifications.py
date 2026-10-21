@@ -103,6 +103,7 @@ def main():
               "| Script | Author | Checks |", "|---|---|---|",
               "| `td1/crosscheck_manal.py` | manalhdev | C15, C16, C19: Python on the CSV files, no SQL |",
               "| `crosscheck_references_axel.py` | axel12334556 | C02, C13, C14 (own) and C08, C09, C11: second SQL + Python on CSV |",
+              "| `refs_TasB.py` | TasB | C02, C13, C14 (Axel) and own C15, C16, C19: own SQL + Python on CSV |",
               "| `tools/compare_references.py` | manalhdev | the twenty values against the published table |",
               "", "## Still to do", ""]
     lines += [f"- {t}" for t in todo] or ["- nothing"]
