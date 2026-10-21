@@ -6,28 +6,28 @@ and the values published by the instructors (`kit-docs/reference-values-td1-en.m
 Each value must come from the member's own SQL query, run on `data/boutique.sqlite`, and be checked by
 another member with a different method. The published values are used only to compare.
 
-**12/20 complete** (own query, correct value, peer check done).
+**18/20 complete** (own query, correct value, peer check done).
 
 | Case | Written by | Our value | Published | Equal | Checked by | Check method | Query file | Status |
 |---|---|---|---|---|---|---|---|---|
-| C01 | Marieseka | 792800 | 792800 | yes | planned: ines729 | query copied from td1/c01.sql (committed by Marieseka); peer check pending | td1/c01.sql | correct, peer check pending |
+| C01 | Marieseka | 792800 | 792800 | yes | ines729 | query from td1/c01.sql by Marieseka; ines729: independent Python on CSV, no SQL (td1/crosscheck_ines.py, run on her Windows PC 2026-10-21), equal | td1/c01.sql | complete |
 | C02 | axel12334556 | 590320 | 590320 | yes | TasB | axel12334556: self-check 2nd SQL + Python on CSV; TasB: own SQL + independent Python on CSV (refs_TasB.py), equal | td1/C02.sql | complete |
 | C03 | ines729 | 936350 | 936350 | yes | Daiki4529 | Daiki4529: independent Python on CSV, no SQL (td1/crosscheck_c03_c06_c07.py), equal | td1/C03.sql | complete |
 | C04 | Daiki4529 | 2826250 | 2826250 | yes | Marieseka (pending) | pending | td1/c04.sql | correct, peer check pending |
-| C05 | Marieseka | 38480 | 38480 | yes | planned: ines729 | query copied from td1/c05.sql (committed by Marieseka); peer check pending | td1/c05.sql | correct, peer check pending |
+| C05 | Marieseka | 38480 | 38480 | yes | ines729 | query from td1/c05.sql by Marieseka; ines729: independent Python on CSV, no SQL (td1/crosscheck_ines.py, run on her Windows PC 2026-10-21), equal | td1/c05.sql | complete |
 | C06 | ines729 | 0 | 0 | yes | Daiki4529 | Daiki4529: independent Python on CSV, no SQL (td1/crosscheck_c03_c06_c07.py), equal | td1/C06.sql | complete |
 | C07 | ines729 | 13970 | 13970 | yes | Daiki4529 | Daiki4529: independent Python on CSV, no SQL (td1/crosscheck_c03_c06_c07.py), equal | td1/C07.sql | complete |
 | C08 | lorentejla | 605580 | 605580 | yes | axel12334556 | self: Python on CSV (date arithmetic) + per-customer totals summed by hand; peer-checked by axel12334556: 2nd SQL (birth-date interval) + Python on CSV, identical | td1/C08.sql | complete |
 | C09 | lorentejla | 487980 | 487980 | yes | axel12334556 | self: Python on CSV (date arithmetic) + per-customer totals summed by hand; peer-checked by axel12334556: 2nd SQL (birth-date interval) + Python on CSV, identical | td1/C09.sql | complete |
-| C10 | manalhdev | 558980 | 558980 | yes | lorentejla (pending) | pending | - | correct, peer check pending |
+| C10 | manalhdev | 558980 | 558980 | yes | lorentejla | peer: SQL re-run read-only = 558980 + independent Python on CSV (age computed at each order date; all orders; customers C004 C005 C007 C008 C009 C022) = 558980; match | - | complete |
 | C11 | lorentejla | 446690 | 446690 | yes | axel12334556 | self: Python on CSV (date arithmetic) + per-customer totals summed by hand; peer-checked by axel12334556: 2nd SQL (birth-date interval) + Python on CSV, identical | td1/C11.sql | complete |
-| C12 | Marieseka | 1666490 | 1666490 | yes | planned: ines729 | query copied from td1/c12.sql (committed by Marieseka); peer check pending | td1/c12.sql | correct, peer check pending |
+| C12 | Marieseka | 1666490 | 1666490 | yes | ines729 | query from td1/c12.sql by Marieseka; ines729: independent Python on CSV, no SQL (td1/crosscheck_ines.py, run on her Windows PC 2026-10-21), equal | td1/c12.sql | complete |
 | C13 | axel12334556 | 107740 | 107740 | yes | TasB | axel12334556: self-check 2nd SQL + Python on CSV; TasB: own SQL + independent Python on CSV (refs_TasB.py), equal | td1/C13.sql | complete |
 | C14 | axel12334556 | 0 | 0 | yes | TasB | axel12334556: self-check 2nd SQL + Python on CSV; TasB: own SQL + independent Python on CSV (refs_TasB.py), equal | td1/C14.sql | complete |
 | C15 | TasB | 168680 | 168680 | yes | manalhdev | TasB: self-check Python on CSV; manalhdev: independent Python on CSV, no SQL (td1/crosscheck_manal.py), equal | td1/C15.sql | complete |
 | C16 | TasB | 376740 | 376740 | yes | manalhdev | TasB: self-check Python on CSV; manalhdev: independent Python on CSV, no SQL (td1/crosscheck_manal.py), equal | td1/C16.sql | complete |
-| C17 | manalhdev | 258180 | 258180 | yes | lorentejla (pending) | pending | - | correct, peer check pending |
-| C18 | manalhdev | 62480 | 62480 | yes | lorentejla (pending) | pending | - | correct, peer check pending |
+| C17 | manalhdev | 258180 | 258180 | yes | lorentejla | peer: SQL re-run read-only = 258180 + independent Python on CSV (date arithmetic; customers aged 25 on 2026-09-25: C001 C002 C005 C007 C008 C009; period [2026-01-01; 2026-07-01) and products a/b/c) = 258180; match | - | complete |
+| C18 | manalhdev | 62480 | 62480 | yes | lorentejla | peer: SQL re-run read-only = 62480 + independent Python on CSV (age computed at each order date; May 2026 period; customers C004 C008 C022; edge case O0089 placed on C008 25th birthday counted) = 62480; match (AI-assisted) | - | complete |
 | C19 | TasB | 1990 | 1990 | yes | manalhdev | TasB: self-check Python on CSV; manalhdev: independent Python on CSV, no SQL (td1/crosscheck_manal.py), equal | td1/C19.sql | complete |
 | C20 | Daiki4529 | 1106090 | 1106090 | yes | Marieseka (pending) | pending | td1/c20.sql | correct, peer check pending |
 
@@ -42,11 +42,5 @@ another member with a different method. The published values are used only to co
 
 ## Still to do
 
-- C01: ines729 cross-checks with a different method
 - C04: Marieseka cross-checks with a different method
-- C05: ines729 cross-checks with a different method
-- C10: lorentejla cross-checks with a different method
-- C12: ines729 cross-checks with a different method
-- C17: lorentejla cross-checks with a different method
-- C18: lorentejla cross-checks with a different method
 - C20: Marieseka cross-checks with a different method
