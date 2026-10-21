@@ -6,14 +6,14 @@ and the values published by the instructors (`kit-docs/reference-values-td1-en.m
 Each value must come from the member's own SQL query, run on `data/boutique.sqlite`, and be checked by
 another member with a different method. The published values are used only to compare.
 
-**18/20 complete** (own query, correct value, peer check done).
+**20/20 complete** (own query, correct value, peer check done).
 
 | Case | Written by | Our value | Published | Equal | Checked by | Check method | Query file | Status |
 |---|---|---|---|---|---|---|---|---|
 | C01 | Marieseka | 792800 | 792800 | yes | ines729 | query from td1/c01.sql by Marieseka; ines729: independent Python on CSV, no SQL (td1/crosscheck_ines.py, run on her Windows PC 2026-10-21), equal | td1/c01.sql | complete |
 | C02 | axel12334556 | 590320 | 590320 | yes | TasB | axel12334556: self-check 2nd SQL + Python on CSV; TasB: own SQL + independent Python on CSV (refs_TasB.py), equal | td1/C02.sql | complete |
 | C03 | ines729 | 936350 | 936350 | yes | Daiki4529 | Daiki4529: independent Python on CSV, no SQL (td1/crosscheck_c03_c06_c07.py), equal | td1/C03.sql | complete |
-| C04 | Daiki4529 | 2826250 | 2826250 | yes | Marieseka (pending) | pending | td1/c04.sql | correct, peer check pending |
+| C04 | Daiki4529 | 2826250 | 2826250 | yes | Marieseka | query from td1/c04.sql by Daiki4529; Marieseka: independent Python on CSV, no SQL (td1/crosscheck_marie.py, run on her PC 2026-10-21), equal | td1/c04.sql | complete |
 | C05 | Marieseka | 38480 | 38480 | yes | ines729 | query from td1/c05.sql by Marieseka; ines729: independent Python on CSV, no SQL (td1/crosscheck_ines.py, run on her Windows PC 2026-10-21), equal | td1/c05.sql | complete |
 | C06 | ines729 | 0 | 0 | yes | Daiki4529 | Daiki4529: independent Python on CSV, no SQL (td1/crosscheck_c03_c06_c07.py), equal | td1/C06.sql | complete |
 | C07 | ines729 | 13970 | 13970 | yes | Daiki4529 | Daiki4529: independent Python on CSV, no SQL (td1/crosscheck_c03_c06_c07.py), equal | td1/C07.sql | complete |
@@ -29,7 +29,7 @@ another member with a different method. The published values are used only to co
 | C17 | manalhdev | 258180 | 258180 | yes | lorentejla | peer: SQL re-run read-only = 258180 + independent Python on CSV (date arithmetic; customers aged 25 on 2026-09-25: C001 C002 C005 C007 C008 C009; period [2026-01-01; 2026-07-01) and products a/b/c) = 258180; match | - | complete |
 | C18 | manalhdev | 62480 | 62480 | yes | lorentejla | peer: SQL re-run read-only = 62480 + independent Python on CSV (age computed at each order date; May 2026 period; customers C004 C008 C022; edge case O0089 placed on C008 25th birthday counted) = 62480; match (AI-assisted) | - | complete |
 | C19 | TasB | 1990 | 1990 | yes | manalhdev | TasB: self-check Python on CSV; manalhdev: independent Python on CSV, no SQL (td1/crosscheck_manal.py), equal | td1/C19.sql | complete |
-| C20 | Daiki4529 | 1106090 | 1106090 | yes | Marieseka (pending) | pending | td1/c20.sql | correct, peer check pending |
+| C20 | Daiki4529 | 1106090 | 1106090 | yes | Marieseka | query from td1/c20.sql by Daiki4529; Marieseka: independent Python on CSV, no SQL (td1/crosscheck_marie.py, run on her PC 2026-10-21), equal | td1/c20.sql | complete |
 
 ## Check scripts
 
@@ -42,5 +42,4 @@ another member with a different method. The published values are used only to co
 
 ## Still to do
 
-- C04: Marieseka cross-checks with a different method
-- C20: Marieseka cross-checks with a different method
+- nothing
