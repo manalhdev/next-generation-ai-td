@@ -19,15 +19,15 @@ another member with a different method. The published values are used only to co
 | C07 | ines729 | 13970 | 13970 | yes | Daiki4529 | Daiki4529: independent Python on CSV, no SQL (td1/crosscheck_c03_c06_c07.py), equal | td1/C07.sql | complete |
 | C08 | lorentejla | 605580 | 605580 | yes | axel12334556 | self: Python on CSV (date arithmetic) + per-customer totals summed by hand; peer-checked by axel12334556: 2nd SQL (birth-date interval) + Python on CSV, identical | td1/C08.sql | complete |
 | C09 | lorentejla | 487980 | 487980 | yes | axel12334556 | self: Python on CSV (date arithmetic) + per-customer totals summed by hand; peer-checked by axel12334556: 2nd SQL (birth-date interval) + Python on CSV, identical | td1/C09.sql | complete |
-| C10 | manalhdev | 558980 | 558980 | yes | lorentejla | peer: SQL re-run read-only = 558980 + independent Python on CSV (age computed at each order date; all orders; customers C004 C005 C007 C008 C009 C022) = 558980; match | - | complete |
+| C10 | manalhdev | 558980 | 558980 | yes | lorentejla | lorentejla: SQL re-run read-only = 558980 + independent Python on CSV | - | complete |
 | C11 | lorentejla | 446690 | 446690 | yes | axel12334556 | self: Python on CSV (date arithmetic) + per-customer totals summed by hand; peer-checked by axel12334556: 2nd SQL (birth-date interval) + Python on CSV, identical | td1/C11.sql | complete |
 | C12 | Marieseka | 1666490 | 1666490 | yes | ines729 | query from td1/c12.sql by Marieseka; ines729: independent Python on CSV, no SQL (td1/crosscheck_ines.py, run on her Windows PC 2026-10-21), equal | td1/c12.sql | complete |
 | C13 | axel12334556 | 107740 | 107740 | yes | TasB | axel12334556: self-check 2nd SQL + Python on CSV; TasB: own SQL + independent Python on CSV (refs_TasB.py), equal | td1/C13.sql | complete |
 | C14 | axel12334556 | 0 | 0 | yes | TasB | axel12334556: self-check 2nd SQL + Python on CSV; TasB: own SQL + independent Python on CSV (refs_TasB.py), equal | td1/C14.sql | complete |
 | C15 | TasB | 168680 | 168680 | yes | manalhdev | TasB: self-check Python on CSV; manalhdev: independent Python on CSV, no SQL (td1/crosscheck_manal.py), equal | td1/C15.sql | complete |
 | C16 | TasB | 376740 | 376740 | yes | manalhdev | TasB: self-check Python on CSV; manalhdev: independent Python on CSV, no SQL (td1/crosscheck_manal.py), equal | td1/C16.sql | complete |
-| C17 | manalhdev | 258180 | 258180 | yes | lorentejla | peer: SQL re-run read-only = 258180 + independent Python on CSV (date arithmetic; customers aged 25 on 2026-09-25: C001 C002 C005 C007 C008 C009; period [2026-01-01; 2026-07-01) and products a/b/c) = 258180; match | - | complete |
-| C18 | manalhdev | 62480 | 62480 | yes | lorentejla | peer: SQL re-run read-only = 62480 + independent Python on CSV (age computed at each order date; May 2026 period; customers C004 C008 C022; edge case O0089 placed on C008 25th birthday counted) = 62480; match (AI-assisted) | - | complete |
+| C17 | manalhdev | 258180 | 258180 | yes | lorentejla | lorentejla: SQL re-run read-only = 258180 + independent Python on CSV | - | complete |
+| C18 | manalhdev | 62480 | 62480 | yes | lorentejla | lorentejla: SQL re-run read-only = 62480 + independent Python on CSV | - | complete |
 | C19 | TasB | 1990 | 1990 | yes | manalhdev | TasB: self-check Python on CSV; manalhdev: independent Python on CSV, no SQL (td1/crosscheck_manal.py), equal | td1/C19.sql | complete |
 | C20 | Daiki4529 | 1106090 | 1106090 | yes | Marieseka | query from td1/c20.sql by Daiki4529; Marieseka: independent Python on CSV, no SQL (td1/crosscheck_marie.py, run on her PC 2026-10-21), equal | td1/c20.sql | complete |
 
