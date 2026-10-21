@@ -46,3 +46,9 @@ the output cap is 1 000–1 024 tokens, reasoning included, so one call may coun
 With an 8K tokens/minute cap, about 4–5 calls per minute fit, while the 3-second spacing allows up to 20.
 A Groq operator running 20 questions in a row may therefore receive HTTP 429 on tokens per minute even though
 requests/day is far from reached. If it happens: read `Retry-After`, wait, use the single allowed retry.
+
+## TD 1 day (2026-10-21)
+
+| Date | Member | Machine | Local checks | Models OK | Notes |
+|---|---|---|---|---|---|
+| 2026-10-21 | ines729 | Windows, Python 3.12.10, sqlite3 3.49.1, fresh clone | 4/4 OK | 5/5 | Git installed the same day with `winget install Git.Git`. Database and CSV hashes identical to the manifest on Windows: the `.gitattributes` added by TasB (`*.csv -text`, ...) prevents CRLF conversion of the data files at checkout. |
