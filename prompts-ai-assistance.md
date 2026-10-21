@@ -25,3 +25,20 @@ things — do them, and when you can't, guide me." Followed by the two instructo
 - Each SQL value is cross-checked by a pure-Python computation on the CSV files (no SQL). All 20 agree.
   Limit: both computations were written by the same assistant from the same reading of the conventions,
   so they are not independent on interpretation; a member must check the conventions by hand.
+
+## 2026-10-21 — morning of TD 1 (Claude Code, Claude Opus 5.5), Manal Hassan
+
+**Prompt (translated from French):** "It's day one of the TD, what do we have to do?"
+
+**What the assistant did:** noticed the course site now serves pack 2026-10-18-students-1, downloaded it, diffed it
+with the 14 October kit (code, database, questions and model list unchanged; documents updated: schedule 13:30–18:00,
+Moodle quiz 17:45–18:00, hand-in Sunday 25 Oct 23:59, the five models are now a "proposal" that may be replaced by a
+documented free model, code basics checked on the repository), copied the updated documents into the repository;
+wrote `tools/td1_consolidate.py`, tested offline on simulated demo traces in a scratch copy (not committed).
+
+**Decisions:**
+- the kit's `five-model-summary-en.csv` template still listed the withdrawn `inclusionai/ling-3.0-flash-sante:free`;
+  replaced by `cohere/north-mini-code:free`, the model of the 14 October selection.
+- `tools/td1_consolidate.py` only reads raw files; it pre-fills evidence but leaves the cause of each failure as TODO,
+  because the cause must be read from the SQL by a member (outcome R3).
+- simulated rows are excluded from the comparison CSV, so they can never enter a real count.

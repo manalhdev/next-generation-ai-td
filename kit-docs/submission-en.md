@@ -1,6 +1,18 @@
 # Hand-in after each session
 
-Pack 2026-10-14-students-1, 14 October 2026. One repository per sub-group: use a public Git repository, kept from TD 1 to TD 3: the eight members share it and share its mark. Create it now and check that it opens without signing in. After each session, update your sub-group's entry in the same Moodle hand-in area of the course Next Generation AI (learning.devinci.fr). Include the full repository URL, the session's full commit hash and a link to its Markdown report at that commit. Keep the previous TD entries so that each submitted version remains identifiable. Follow the hand-in dates announced in Moodle.
+Pack 2026-10-18-students-1, 18 October 2026. One repository per sub-group: use a public Git repository, kept from TD 1 to TD 3: the six to eight members of the sub-group share it and share its mark. Create it now and check that it opens without signing in. After each session, update your sub-group's entry in the same Moodle hand-in area of the course Next Generation AI (learning.devinci.fr). Include the full repository URL, the session's full commit hash and a link to its Markdown report at that commit. Keep the previous TD entries so that each submitted version remains identifiable.
+
+## Deadlines
+
+Hand in after each session, by 23:59 Paris time on the Sunday that follows it. No video and no oral presentation.
+
+| Session | Hand-in deadline |
+|---|---|
+| TD 1, 21 October 2026 | Sunday 25 October 2026, 23:59 |
+| TD 2, 18 November 2026 | Sunday 22 November 2026, 23:59 |
+| TD 3, 11 December 2026 | Sunday 13 December 2026, 23:59 |
+
+The commit recorded in Moodle at the deadline is the version reviewed for that session.
 
 ## What the repository holds
 
@@ -13,7 +25,8 @@ Pack 2026-10-14-students-1, 14 October 2026. One repository per sub-group: use a
 | `five-model-summary-en.csv` | Five models, sourced public index, dated exact-model input and output prices, access and family results |
 | `model-question-comparison-en.csv` | One latest-result row per model and question, status, explanation and pointer to the trace |
 | `prompts-en.md` | System message and user template exactly as used; any variant identified and dated |
-| `README.md` | Sub-group, members, pack version, database hash, environment, commands, completed work and open blocks |
+| Configuration file | The models, providers and parameters actually used, read by the code, including any replacement model; `modeles-autorises.json` of the kit or your own file; no key |
+| `README.md` | Sub-group, members, pack version, database hash, environment, the commands that replay the work from a fresh clone, completed work and open blocks |
 | `reports/td1.md` | Session report: completed work, successes, failures, evidence, causes, limits, contributions and next steps |
 
 Display a models x questions pivot of the long comparison CSV; submit that CSV without a second manual entry. Put causes in its `explanation` column or in linked notes, with raw-file and cell identifiers. See the [fictional example](kit-td1/comparison-example-en.html). The [template directory](templates/README-en.html) supplies blank forms.
@@ -24,7 +37,7 @@ The completed `vote_k_sur_n` in `skeleton-multi-llm-en.py`, the small driver use
 
 ### After TD 3
 
-The configuration table and the cost worksheet, prices dated and sourced; an incomplete equivalent is N/A with coverage and reasons, and a known subtotal is labelled as such. The named use case, the cost of an error and the chosen configuration. The three slides. The recorded demonstration of one question: the returned SQL, the sandbox result, the verdict and the vote; a replayed stored trace is labelled as replay. Add `reports/td3.md` and retain the earlier reports. The complete repository is checked at the end of TD 3, with the video.
+The configuration table and the cost worksheet, prices dated and sourced; an incomplete equivalent is N/A with coverage and reasons, and a known subtotal is labelled as such. The named use case, the cost of an error and the chosen configuration. The three slides. Add `reports/td3.md` and retain the earlier reports.
 
 ## A Markdown report after each TD
 
@@ -36,9 +49,22 @@ Commit the report with the session's code and evidence. Record the full commit h
 
 A public repository is read by anyone. It contains no API key, no password, no environment file and no account screenshot with credentials. Keys stay in the environment variables of your own machine, as set in the [environment guide](kit-td1/guide-environnement-etudiant-en.html). The kit's `.gitignore` keeps environment files, keys, virtual environments and caches out of the repository: keep it at the root of your repository. Finding and applying the practices that protect a public repository is part of the work.
 
+## The basics of the code
+
+Programming style is not marked. A blocking bug, or a design without the basics of software, costs points on the sub-group mark. Every repository has these basics:
+
+- models and parameters read from a configuration file, no model hard-coded;
+- one common interface for the model clients;
+- handling of network and access errors;
+- one trace line per call;
+- a README whose commands replay the work;
+- no secret in the repository.
+
+The repository review applies this list with the help of an AI.
+
 ## AI assistance
 
-AI-assisted code is accepted, as is code written by hand. The assessment covers the framing of the problem, the specification, the architecture of your system and the decisions you justify, not the raw quality of the code. Keep the prompts used, for the experiment as for the coding help, in the repository as they were used.
+AI-assisted code is accepted, as is code written by hand: your sub-group remains responsible for every line and can explain it. The assessment covers the framing of the problem, the specification, the architecture of your system, the decisions you justify and the basics above. Keep the prompts used, for the experiment as for the coding help, in the repository as they were used.
 
 ## Before each hand-in
 

@@ -1,8 +1,8 @@
 # Student assignment: ask free models for SQL, run it locally, measure
 
-> Final. Pack 2026-10-14-students-1. Set your machine up with [Before TD 1](../before-td1-en.html).
+> Final. Pack 2026-10-18-students-1. Set your machine up with [Before TD 1](../before-td1-en.html).
 
-ESILV, Next-Generation AI, practical work. One assistant per sub-group of eight.
+ESILV, Next-Generation AI, practical work. One assistant per sub-group of six to eight.
 Everything runs on your own computer: Python 3.10 or later, the `sqlite3` module
 of the standard library, and two free API accounts that you create yourselves.
 No server of the school, no paid model, no key shared with another sub-group.
@@ -153,7 +153,7 @@ The skeleton of the kit (`skeleton-multi-llm-en.py`) and its sandbox
 
 ## 4. Models to use
 
-Use these five required models and the exact parameters in `modeles-autorises.json`. The order is a list, not a performance ranking. Measure your own results.
+These five models are a proposal: selected on 14 October 2026, all accessible on 20 October 2026. Use them with the exact parameters in `modeles-autorises.json`. The order is a list, not a performance ranking. Measure your own results.
 
 | Provider | Exact identifier | Parameters |
 |---|---|---|
@@ -163,7 +163,9 @@ Use these five required models and the exact parameters in `modeles-autorises.js
 | Groq | `qwen/qwen3.8-27b` | `reasoning_effort`: `none`, `max_completion_tokens`: 1000 |
 | OpenRouter | `dots-studio/dots-3-note-preview:free` | `reasoning`: {`enabled`: false}, `max_tokens`: 1024 |
 
-Use these exact identifiers from the **14 October 2026** selection. Keep the `:free` suffix for both OpenRouter models and use Groq on the Free plan. The supplied scripts cap OpenRouter input/output prices at zero. The selection contains five required models.
+Use these exact identifiers from the **14 October 2026** selection. Keep the `:free` suffix for both OpenRouter models and use Groq on the Free plan. The supplied scripts cap OpenRouter input/output prices at zero. The selection contains five proposed models.
+
+**Replacing a model.** If a proposed model no longer answers, or to test another one, use another free model: a Groq model on the Free plan, or an OpenRouter identifier ending with `:free`. Record its exact identifier and parameters in your configuration file, read by your code, and in the trace (`model_requested`). Keep the zero-price cap on OpenRouter. Note the change and its date in the session report.
 
 The output caps are experiment parameters. Check your organisation's actual request and token limits in the provider console. Groq documents model-specific limits and, for some organisations, separate input/output limits. A requested output cap alone does not guarantee a reproducible HTTP 429.
 
@@ -179,7 +181,7 @@ The TD 1 base batch is **100 cells: 20 questions x 5 models, with 60 initial Gro
 | D | Groq `qwen/qwen3.8-27b` | 20 |
 | E | OpenRouter `dots-studio/dots-3-note-preview:free` | 20 |
 
-Members C and E use two distinct members' personal OpenRouter accounts. A, B and D use their own Groq accounts. F, G and H cross-check references, merge traces and prepare the summaries. Rotate roles in later sessions. Pass the turn between operators: one request in flight per sub-group, with the three-second interval preserved.
+Members C and E use two distinct members' personal OpenRouter accounts. A, B and D use their own Groq accounts. The other members, F, G and H depending on the size of the sub-group (six to eight), check: they cross-check references, merge traces and prepare the summaries. Rotate roles in later sessions. Pass the turn between operators: one request in flight per sub-group, with the three-second interval preserved.
 
 Each member reads their account's remaining allowance before running, records controls already consumed and checks that the 20 assigned cells fit. Reserve a target margin of **five additional calls per operator**, shared between any further checks and retries, where their actual remaining allowance permits it. The margin is a planning reserve, not an entitlement or a provider limit. One `check_access.py` execution uses three Groq and two OpenRouter calls, for the five required models. Save its output once instead of repeating it to take a screenshot.
 
@@ -193,7 +195,7 @@ python3 skeleton-multi-llm-en.py --run --models groq:openai/gpt-oss-120b --cases
 
 The command uses `reference-td1.csv`; fill and independently validate the selected references first. Extend `--cases` within the same experiment to finish the assigned cells. Merge CSV rows with a single header and keep the original JSONL files. Changes to prompts or references start a new experiment with new `--state` and `--out` files.
 
-TD 2 and TD 3 require no new network calls: use the saved traces for voting and costing. An optional new batch needs an explicit separate allocation with the instructor; only the five models above belong to the required selection.
+TD 2 and TD 3 require no new network calls: use the saved traces for voting and costing. An optional new batch needs an explicit separate allocation with the instructor. The five models above are the proposed selection; a replacement model is documented as in section 4.
 
 Sources checked on 14 October 2026: [Groq limits](https://console.groq.com/docs/rate-limits), [OpenRouter limits and account counter](https://openrouter.ai/docs/api_reference/limits). Read the live allowance of each account; no current numerical allowance is assumed here.
 
@@ -219,11 +221,11 @@ figure.
 
 Use one public Git repository per sub-group throughout TD 1, TD 2 and TD 3. At the end of each session, add its Markdown report: `reports/td1.md`, `reports/td2.md` or `reports/td3.md`. Describe completed and incomplete work, successes and failures with evidence, observed causes and hypotheses, limitations, each member's contribution and next steps. Keep the code, prompts, results and raw traces alongside these reports.
 
-After each TD, update the same Moodle hand-in entry with the full repository URL, the session's full commit hash and a link to its report at that commit. Retain previous TD entries. The repository must be readable without signing in from its creation; the hand-in dates are announced in Moodle.
+After each TD, update the same Moodle hand-in entry with the full repository URL, the session's full commit hash and a link to its report at that commit. Retain previous TD entries. The repository must be readable without signing in from its creation. Hand in by 23:59 Paris time on the Sunday after each session: 25 October, 22 November and 13 December 2026. No video.
 
 For TD 1, submit the raw CSV and JSONL attempts, your executed and independently checked `reference-td1.csv`, and two summaries: [model-question-comparison-en.csv](model-question-comparison-en.csv) and [five-model-summary-en.csv](five-model-summary-en.csv). The [fictional example](comparison-example-en.md) defines the columns. The long comparison CSV holds one final result per model/question, its explanation and raw-trace reference. Display its pivot as the models x questions matrix; do not enter the same work twice. Causes belong in its rows or linked notes.
 
-Coding assistance is proposed with declared use and verified, explained code, pending school approval. A reference amount comes from SQL execution and independent checking, never from accepting a model's numerical answer.
+Coding assistance is allowed, with declared use and verified, explained code: your sub-group remains responsible for every line. A reference amount comes from SQL execution and independent checking, never from accepting a model's numerical answer.
 
 If no access has failed, R3 can use an identified instructor-supplied example. If no wrong consensus occurs, Q2 can use an identified historical or synthetic example. Their nature stays separate from your real batch; marks assess your explanation.
 

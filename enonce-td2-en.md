@@ -1,6 +1,6 @@
 # TD 2 - The quorum, then the routing rule
 
-> Beta. Pack 2026-10-14-students-1. Set your machine up with [Before TD 1](../before-td1-en.html).
+> Beta. Pack 2026-10-18-students-1. Set your machine up with [Before TD 1](../before-td1-en.html).
 
 **Module: Trustworthy generative AI. Session 2 (18 November), 13:30 to 18:00.**
 
@@ -46,8 +46,9 @@ routing rule is written and exercised on a simulator.
 | 15:00 to 15:45 | **Step 2**: at least one wrong consensus, its cause, the consequence | commented case |
 | 15:45 to 16:00 | Break | |
 | 16:00 to 17:15 | **Step 3**: the routing rule, written then exercised on the simulator | one-page rule, simulator outputs |
-| 17:15 to 17:45 | **Step 4**: plenary | collective finding |
-| 17:45 to 18:00 | Marking of the session | Q1, Q2 and Q3 marked on the sheet |
+| 17:15 to 17:30 | **Step 4**: plenary | collective finding |
+| 17:30 to 17:45 | Marking of the session | Q1, Q2 and Q3 |
+| 17:45 to 18:00 | Individual quiz on Moodle | quiz mark |
 
 ## Step 1 - The k-of-n vote (13:45 to 15:00)
 
@@ -127,7 +128,7 @@ rule come from the portfolio and from TD 1.
 **Deliverable of the step**: the one-page rule and the simulator outputs, before
 and after adaptation.
 
-## Step 4 - Plenary (17:15 to 17:45)
+## Step 4 - Plenary (17:15 to 17:30)
 
 Each sub-group presents its wrong consensus and its rule. Compare the rules: the
 same database, the same traces, rules that differ by the checking retained and
@@ -135,7 +136,8 @@ by the cost accepted. Note the questions for which no free model is enough on
 its own: they set the price of checking in TD 3.
 
 The instructor then marks the session at each table: Q1, Q2 and Q3, each 0, 1 or
-2, on the sheet laid on your table since TD 1.
+2, as set out on the Assessment page. The individual quiz on Moodle takes the
+last fifteen minutes, from 17:45 to 18:00.
 
 ## What is expected (the evaluated artefacts)
 
@@ -152,7 +154,7 @@ The instructor then marks the session at each table: Q1, Q2 and Q3, each 0, 1 or
 
 At the end of TD 2, add `reports/td2.md` to your sub-group's public Git repository, shared from TD 1 to TD 3. Describe the work attempted and completed, successes and failures with links to the results and traces, observed causes and hypotheses, limitations, each member's contribution and next steps. Identify replayed or synthetic examples explicitly.
 
-Commit the report with the code, prompts and evidence. Update your entry in the same Moodle hand-in area with the full repository URL, the session's full commit hash and a link to the report at that commit. Retain earlier TD entries and reports. Check that the repository opens without signing in. Follow the hand-in dates announced in Moodle.
+Commit the report with the code, prompts and evidence. Update your entry in the same Moodle hand-in area with the full repository URL, the session's full commit hash and a link to the report at that commit. Retain earlier TD entries and reports. Check that the repository opens without signing in. Hand in by 23:59 Paris time on Sunday 22 November 2026. No video.
 
 ## What is valued
 

@@ -2,13 +2,13 @@
 
 Use the steps below to prepare, then run TD 1. Each step links the files you need.
 
-Allow about 45 minutes for preparation. Finish by Sunday 18 October 2026, inclusive, for the session on 21 October 2026. The session starts with a fifteen-minute check and reminder of the organisation.
+Allow about 45 minutes for preparation. Preparation was due by Sunday 18 October 2026; the environment is checked when the lab opens at 13:30 on 21 October 2026. The session starts with a fifteen-minute check and reminder of the organisation.
 
 ## At home, before the session
 
 1. **Download and extract the student ZIP** (5 min)
    - Use the button below. Extract the archive into a new folder and locate `kit-td1` inside it. Keep all files together.
-   - [Download student ZIP](../downloads/esilv-student-2026-10-14.zip)
+   - [Download student ZIP](../downloads/esilv-student-2026-10-18.zip)
    - You see: The extracted folder contains `before-td1-en.html` and `kit-td1`, including the database, scripts, questions and two CSV summary templates.
    - You do not: An incomplete extraction: download again and extract into an empty folder. If you already extracted this archive, continue with environment preparation.
 
@@ -22,7 +22,7 @@ Allow about 45 minutes for preparation. Finish by Sunday 18 October 2026, inclus
    - Use personal Groq Free and OpenRouter accounts, set `GROQ_API_KEY` and `OPENROUTER_API_KEY` from the guide, then run once: `python3 check_access.py | tee ready-for-td1.txt`. PowerShell: `python check_access.py | Tee-Object ready-for-td1.txt`. Read your account allowance.
    - [Accounts, checks and troubleshooting](kit-td1/guide-environnement-etudiant-en.html)
    - You see: Four local checks and the five required models report `[OK]`. The same run is saved in `ready-for-td1.txt`. Count its three Groq and two OpenRouter calls separately from the base batch.
-   - You do not: Read the error, your account counter and any `Retry-After`. Save the failed output and report a persistent block by Sunday 18 October 2026; omit keys. A new key adds no capacity.
+   - You do not: Read the error, your account counter and any `Retry-After`. Save the failed output and report a persistent block at once, at the latest at the opening check at 13:30; omit keys. A new key adds no capacity.
 
 4. **Read TD 1 and bring the saved evidence** (5 min)
    - Read the assignment and locate the reference template, raw traces and two result templates. Bring the saved check and note the remaining allowance of your accounts; no second network run is needed to save proof.
@@ -33,7 +33,7 @@ Allow about 45 minutes for preparation. Finish by Sunday 18 October 2026, inclus
 ## In the room, during TD 1
 
 1. **Calculate and check the references** (75 min)
-   - Share the twenty queries among the eight members. Execute SQL on the database, record `case_id`, `sql`, `revenue_cents`, then independently check with another member.
+   - Share the twenty queries among the members of your sub-group, two or three each. Execute SQL on the database, record `case_id`, `sql`, `revenue_cents`, then independently check with another member.
    - [Questions and conventions](kit-td1/questions-td1-en.html)
    - You see: Twenty references checked with the instructor, with the relevant conventions explained. A model answer never supplies a reference amount.
    - You do not: Resolve differences before calling the affected questions. Correct results on the first attempt are fully eligible for R1 level 2.

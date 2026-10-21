@@ -1,5 +1,7 @@
 # Syllabus - ESILV, "Next-Generation AI" theme (Didier Parisot)
 
+> **Syllabus filed with the school before 18 October 2026.** For the organisation and the marking, the [Assessment page](assessment-en.html), the [Hand-in page](submission-en.html) and the lab assignments are the current reference: sub-groups of six to eight, no oral presentation, no video.
+
 > Hand-in channel, 8 October 2026: each sub-group keeps one public Git repository and hands in its link through Moodle after each session; see [Hand-in](submission-en.html). The mention of the school's GitHub below predates this decision.
 
 > This is the English delivery version; the module is taught in English. French reference: `syllabus-esilv-next-gen-ai.md` (teaching-team source, outside the student pack). Both versions carry the same substance, section by section.

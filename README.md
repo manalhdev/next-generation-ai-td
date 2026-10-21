@@ -25,7 +25,7 @@ TD 1 roles (protocol allocation): A GPT-OSS 120B (Groq) · B GPT-OSS 20B (Groq) 
 
 ## Course pack and environment
 
-- Course pack: **2026-10-14-students-1** (student kit dated 14 October 2026, `modeles-autorises.json` dated `2026-10-14`).
+- Course pack: **2026-10-18-students-1** (student kit dated 18 October 2026; code, database and model selection identical to the 14 October kit, documents updated).
 - Database `data/boutique.sqlite`, SHA-256 `0077e235adc2ca647b484e3083c98a6d7cae3ef3655ce366a299caf13398fec2` (seed 20260925), identical to `data/manifest.json`.
 - Python 3.10+ (tested with 3.13.9 on macOS), virtual environment with `requests` (only needed by `check_access.py`).
 - Free accounts only: Groq Free plan and OpenRouter `:free` routes. No credits purchased.
@@ -60,6 +60,9 @@ python3 prep/draft_references.py            # reference queries + independent CS
 # TD 1, one operator at a time (example: member A)
 python3 skeleton-multi-llm-en.py --run --models groq:openai/gpt-oss-120b \
         --cases C01,C02,... --state state-A.jsonl --out traces-A.csv
+
+# after all batches: merge traces, build the comparison CSV, the pivot and the family counts
+python3 tools/td1_consolidate.py
 ```
 
 Windows PowerShell: use `python` instead of `python3`, `.venv\Scripts\Activate.ps1`, `$env:GROQ_API_KEY = "..."` and `Tee-Object` instead of `tee`.
@@ -76,6 +79,7 @@ Windows PowerShell: use `python` instead of `python3`, `.venv\Scripts\Activate.p
 | `prompts-en.md` | System message and user template exactly as used |
 | `prompts-ai-assistance.md` | Prompts used for AI coding assistance, and the decisions taken |
 | `reports/td1.md`, `td2.md`, `td3.md` | Session reports |
+| `tools/td1_consolidate.py` | Merges `traces-*.csv` / `state-*.jsonl` into `traces-td1.*`, writes the comparison CSV, `results/pivot-td1.md` and `results/families-td1.md` (AI-assisted, see `prompts-ai-assistance.md`) |
 | `prep/` | Preparation work before TD 1: access checks, draft references, demo run (simulated) |
 | `kit-docs/` | Assessment, hand-in page, syllabus and templates from the kit |
 | everything else | The unmodified kit (`KIT-README.md` describes each file) |
@@ -86,7 +90,7 @@ Windows PowerShell: use `python` instead of `python3`, `.venv\Scripts\Activate.p
 |---|---|
 | Preparation (kit, venv, integrity, offline demo) | done 2026-10-16 |
 | Access check 5/5 models | Manal Hassan: 5/5 OK on 2026-10-16 (3rd attempt, see `prep/access-checks.md`); other members TODO |
-| TD 1 (21 Oct) | not started — draft references ready in `prep/` |
+| TD 1 (21 Oct) | in progress — hand-in by Sun 25 Oct 2026 23:59 |
 | TD 2 (18 Nov) | not started |
 | TD 3 (11 Dec) | not started |
 
