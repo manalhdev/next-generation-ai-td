@@ -1,10 +1,10 @@
 # Lab kit, Trustworthy generative AI, ESILV
 
-> Final. Pack 2026-10-14-students-1. Set your machine up with [Before TD 1](../before-td1-en.html).
+> Final. Pack 2026-10-18-students-1. Set your machine up with [Before TD 1](../before-td1-en.html).
 
 Kit of 14 October 2026 for the three sessions of 21 October, 18 November and
 11 December. The database and the twenty questions are the same for every
-sub-group. Read the environment guide first and finish preparation by 18 October inclusive; each assignment gives the schedule of its afternoon.
+sub-group. Read the environment guide first. Preparation was due by 18 October; the environment is checked when TD 1 opens at 13:30. Each assignment gives the schedule of its afternoon.
 
 ## Before the first session
 

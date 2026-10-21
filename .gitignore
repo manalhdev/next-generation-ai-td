@@ -23,7 +23,7 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Local download / extraction folders (kept outside the repository)
+# Local download / extraction folders
 _download/
 *.zip
 

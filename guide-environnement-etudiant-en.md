@@ -1,8 +1,8 @@
 # Set up your environment (prerequisite)
 
-> Final. Pack 2026-10-14-students-1. Set your machine up with [Before TD 1](../before-td1-en.html).
+> Final. Pack 2026-10-18-students-1. Set your machine up with [Before TD 1](../before-td1-en.html).
 
-Finish installation and access checks **by 18 October 2026 inclusive**, before the 21 October session. Start by downloading and extracting the student archive. Keep the files together, then open a terminal in the extracted `kit-td1` folder. Show the saved passing check during the fifteen-minute opening.
+Installation and access checks were due **by 18 October 2026**; the environment is checked when the lab opens at 13:30 on 21 October. Start by downloading and extracting the student archive. Keep the files together, then open a terminal in the extracted `kit-td1` folder. Show the saved passing check during the fifteen-minute opening.
 
 ## 1. Python, a virtual environment, and VS Code
 
@@ -149,6 +149,6 @@ Re-run `check_access.py` after fixing the issue.
       all required models OK.
 - [ ] Screenshot of the all-OK output saved.
 
-Finish by 18 October inclusive. Report any remaining blocked step to the instructor with the error and date, leaving keys out of the evidence.
+Preparation was due by 18 October; the environment is checked when the lab opens at 13:30 on 21 October. Report any remaining blocked step to the instructor with the error and date, leaving keys out of the evidence.
 
 In an activated Windows PowerShell environment, use `python` where a lab command shows `python3`. Both refer to the virtual environment interpreter on systems that provide both names.

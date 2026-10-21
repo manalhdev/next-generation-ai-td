@@ -1,14 +1,14 @@
 # TD 3 - Quantifying and deciding
 
-> Beta. Pack 2026-10-14-students-1. Set your machine up with [Before TD 1](../before-td1-en.html).
+> Beta. Pack 2026-10-18-students-1. Set your machine up with [Before TD 1](../before-td1-en.html).
 
 **Module: Trustworthy generative AI. Session 3 (11 December), 13:30 to 18:00.**
 
 You have traces on five models, a vote that abstains without a majority, a wrong
 consensus that has been explained and a routing rule. This session puts a cost
-on each configuration, chooses the one that a named use case justifies, and
-defends it in the oral presentation. At 18:00, your cost table is handed in,
-your three slides are presented and your repository is checked.
+on each configuration, chooses the one that a named use case justifies, figure by figure from the
+traces. By 17:45, your configuration table and your three slides are shown on
+screen and marked at your table; the individual quiz closes the session at 18:00.
 
 ## What you can do by the end of the session
 
@@ -18,7 +18,7 @@ your three slides are presented and your repository is checked.
   correct answers, abstentions, errors.
 - Choose the configuration for a named use case from what an error costs in it,
   and write it up in three slides.
-- Defend the decision before a panel from the traces.
+- Justify the decision from the traces, figure by figure.
 
 ## Material provided
 
@@ -28,7 +28,7 @@ your three slides are presented and your repository is checked.
   of the kit models, the configuration table to fill in.
 - [portefeuille-modeles-en](portefeuille-modeles-en.html) and its CSV: price per million tokens and access
   routes of the sixty pairs.
-- The assessment sheet, on your table since TD 1: nine outcomes, three per session, each marked 0, 1 or 2.
+- The Assessment page: nine outcomes, three per session, each marked 0, 1 or 2.
 
 ## Schedule
 
@@ -37,12 +37,9 @@ your three slides are presented and your repository is checked.
 | 13:30 to 14:30 | **Step 1**: the configuration table and their costs | configuration table |
 | 14:30 to 15:15 | **Step 2**: the configuration for a named use case, the three slides | slides |
 | 15:15 to 15:30 | Break | |
-| 15:30 to 17:30 | **Step 3**: oral presentations, 20 minutes per sub-group (proposal, school approval pending) | oral presentation marks |
-| 17:30 to 18:00 | Final marking; GitHub repository and video checked | grid filled in |
-
-If the school places the oral presentation in the week of 14 December, step 3
-becomes the finalisation of the video and the repository, and final marking
-follows the oral presentation.
+| 15:30 to 17:30 | **Step 3**: the three slides and the repository, shown at your table | three slides, complete repository |
+| 17:30 to 17:45 | Final marking of the session | C1, C2 and C3 |
+| 17:45 to 18:00 | Individual quiz on Moodle | quiz mark |
 
 ## Step 1 - The configuration table (13:30 to 14:30)
 
@@ -88,34 +85,36 @@ The three slides:
    error, the routing rule, the check, the cost per question in two columns,
    what your work does not cover.
 
-**Deliverable of the step**: the three slides and the completed GitHub
+**Deliverable of the step**: the three slides and the completed public Git
 repository.
 
-## Step 3 - The oral presentation (15:30 to 17:30)
+## Step 3 - The slides and the repository at your table (15:30 to 17:30)
 
-Twenty minutes per sub-group (proposal, school approval pending), in parallel in the room. Each member presents
-one part: reference and traces, vote, wrong consensus, rule, costs, decision,
-repository and video. The panel's questions refer back to the traces: where this
-figure comes from, which line shows it.
+Complete the three slides and the repository. The instructor comes to your
+table, reads the configuration table, the use case and the third slide on
+screen, and asks where a figure comes from and which trace line shows it. There
+is no oral presentation: C1, C2 and C3 are marked from what is shown on screen.
 
-The sub-group's GitHub repository contains: `reference-td1.csv`, the trace
+The sub-group's public Git repository contains: `reference-td1.csv`, the trace
 tables, `skeleton-multi-llm-en.py` with the vote, the wrong consensus
 commented, the routing rule and the simulator outputs, the configuration table,
-the three slides, the prompts as they are and the demonstration video (one call,
-the verdict, the vote).
+the three slides and the prompts as they are.
+
+The instructor gives the final levels C1, C2 and C3 from 17:30 to 17:45. The
+individual quiz on Moodle takes the last fifteen minutes, from 17:45 to 18:00.
 
 ## What is expected (the evaluated artefacts)
 
 1. The configuration table with their costs, prices dated and sourced.
 2. The named use case, the cost of an error, the chosen configuration.
 3. The three slides.
-4. The complete GitHub repository and the demonstration video.
+4. The complete public Git repository.
 
 ## Hand-in and session report
 
 At the end of TD 3, add `reports/td3.md` to your sub-group's public Git repository, shared from TD 1 to TD 3. Describe the work attempted and completed, successes and failures with links to the results and traces, observed causes and hypotheses, limitations, each member's contribution and next steps. Identify replayed or synthetic examples explicitly.
 
-Commit the report with the code, prompts and evidence. Update your entry in the same Moodle hand-in area with the full repository URL, the session's full commit hash and a link to the report at that commit. Retain earlier TD entries and reports. Check that the repository opens without signing in. Follow the hand-in dates announced in Moodle.
+Commit the report with the code, prompts and evidence. Update your entry in the same Moodle hand-in area with the full repository URL, the session's full commit hash and a link to the report at that commit. Retain earlier TD entries and reports. Check that the repository opens without signing in. Hand in by 23:59 Paris time on Sunday 13 December 2026. No video.
 
 ## What is valued
 
@@ -125,5 +124,5 @@ Commit the report with the code, prompts and evidence. Update your entry in the 
   model available.
 - **Written limitations**: what the twenty questions do not cover, what the
   simulator assumes.
-- **An oral presentation that refers back to the traces** for every figure put
+- **Slides that refer back to the traces** for every figure put
   forward.
