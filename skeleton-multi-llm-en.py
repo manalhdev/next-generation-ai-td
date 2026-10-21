@@ -69,6 +69,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 HERE = Path(__file__).resolve().parent
 
 # Layout of the student kit: every resource is next to this file. When the file

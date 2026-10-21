@@ -30,6 +30,12 @@ import sys
 import time
 from pathlib import Path
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 HERE = Path(__file__).resolve().parent
 CONFIG = HERE / "modeles-autorises.json"
 DATABASE_NAME = "boutique.sqlite"
