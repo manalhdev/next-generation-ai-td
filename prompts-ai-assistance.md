@@ -42,3 +42,13 @@ wrote `tools/td1_consolidate.py`, tested offline on simulated demo traces in a s
 - `tools/td1_consolidate.py` only reads raw files; it pre-fills evidence but leaves the cause of each failure as TODO,
   because the cause must be read from the SQL by a member (outcome R3).
 - simulated rows are excluded from the comparison CSV, so they can never enter a real count.
+
+## 2026-10-21 — TD 1 step 1 (Claude Code, Claude Opus 5.5), Manal Hassan
+
+**Prompt (translated):** "Do I have to put this in my terminal: <completed-age expression>?" — Manal was assigned C18, C10, C17.
+
+**What the assistant did:** wrote the three full `sqlite3` commands for C10, C18 and C17 with the completed-age
+expression (on `o.date` for "at the time of the order", on the fixed date `'2026-09-25'` for C17). Manal ran them on
+`data/boutique.sqlite`: 558980, 62480, 258180. They match the assistant's pure-Python CSV computation
+(`prep/draft_references.py`), which is not the independent check required by the protocol: lorentejla cross-checks
+these three questions with her own method.
