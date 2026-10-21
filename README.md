@@ -46,6 +46,8 @@ python3 prep/draft_references.py        # draft reference queries, SQL vs CSV ch
 python3 skeleton-multi-llm-en.py --run --models groq:openai/gpt-oss-120b \
         --cases C01,C02 --state state-A.jsonl --out traces-A.csv
 
+python3 tools/compare_references.py     # our references vs the published values
+python3 tools/build_verifications.py    # td1/verifications-td1.md: who wrote and checked each reference
 python3 tools/td1_consolidate.py        # merge traces, comparison CSV, pivot
 ```
 
@@ -61,7 +63,8 @@ python3 tools/td1_consolidate.py        # merge traces, comparison CSV, pivot
 | `prompts-ai-assistance.md` | Prompts used for coding assistance |
 | `reports/` | One report per session |
 | `prep/` | Preparation: access checks, draft reference script |
-| `tools/` | Consolidation script |
+| `td1/verifications-td1.md` | Who wrote and who checked each reference, method, status |
+| `tools/` | Consolidation and verification scripts |
 | `kit-docs/` | Assessment, hand-in rules, templates |
 
 Other files come from the course kit (`KIT-README.md`). `check_access.py` and `skeleton-multi-llm-en.py` were changed only to read keys from `.env`.
