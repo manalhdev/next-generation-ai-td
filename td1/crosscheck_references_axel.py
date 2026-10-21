@@ -1,6 +1,6 @@
 """TD 1 - Step 1 (Axel): compute C02, C13, C14 and cross-check C08, C09, C11.
 
-Usage (from the kit-td1 folder, venv activated):
+Usage (from the repo root or from td1/, venv activated):
     python3 crosscheck_references_axel.py          # Windows: python crosscheck_references_axel.py
 
 For every question, three computations that must agree:
@@ -24,7 +24,9 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-KIT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parent
+HERE = Path(__file__).resolve().parent
+# Repo root = the folder holding data/ and reference-td1.csv; works from the root or from td1/.
+KIT = Path(sys.argv[1]) if len(sys.argv) > 1 else (HERE.parent if HERE.name == "td1" else HERE)
 DB = KIT / "data" / "boutique.sqlite"
 REF = KIT / "reference-td1.csv"
 WRITER = "axel12334556"
