@@ -6,29 +6,29 @@ and the values published by the instructors (`kit-docs/reference-values-td1-en.m
 Each value must come from the member's own SQL query, run on `data/boutique.sqlite`, and be checked by
 another member with a different method. The published values are used only to compare.
 
-**3/20 complete** (own query, correct value, peer check done).
+**6/20 complete** (own query, correct value, peer check done).
 
 | Case | Written by | Our value | Published | Equal | Checked by | Check method | Query file | Status |
 |---|---|---|---|---|---|---|---|---|
 | C01 | Marieseka | - | 792800 | - | planned: ines729 | - | td1/c01.sql | missing query in reference-td1.csv |
-| C02 | axel12334556 | 590320 | 590320 | yes | planned: TasB | self: 2nd SQL (birth-date interval / month prefix) + Python on CSV; peer check pending | td1/C02.sql | correct, peer check pending |
+| C02 | axel12334556 | 590320 | 590320 | yes | TasB | axel12334556: self-check 2nd SQL + Python on CSV; TasB: own SQL + independent Python on CSV (refs_TasB.py), equal | td1/C02.sql | complete |
 | C03 | ines729 | - | 936350 | - | planned: Daiki4529 | - | td1/C03.sql | missing query in reference-td1.csv |
 | C04 | Daiki4529 | 2826250 | 2826250 | yes | Marieseka (pending) | pending | td1/c04.sql | correct, peer check pending |
 | C05 | Marieseka | - | 38480 | - | planned: ines729 | - | td1/c05.sql | missing query in reference-td1.csv |
 | C06 |  | - | 0 | - | planned: Daiki4529 | - | - | missing query in reference-td1.csv |
 | C07 | ines729 | - | 13970 | - | planned: Daiki4529 | - | td1/C07.sql | missing query in reference-td1.csv |
 | C08 | lorentejla | 605580 | 605580 | yes | planned: axel12334556 | self: Python on CSV (date arithmetic) + per-customer totals summed by hand; peer check pending | - | correct, peer check pending |
-| C09 |  | - | 487980 | - | planned: axel12334556 | - | - | query present, value missing |
+| C09 | lorentejla | 487980 | 487980 | yes | planned: axel12334556 | self: Python on CSV (date arithmetic) + per-customer totals summed by hand; peer check pending | - | correct, peer check pending |
 | C10 | manalhdev | 558980 | 558980 | yes | lorentejla (pending) | pending | - | correct, peer check pending |
-| C11 |  | - | 446690 | - | planned: axel12334556 | - | - | query present, value missing |
+| C11 | lorentejla | 446690 | 446690 | yes | planned: axel12334556 | self: Python on CSV (date arithmetic) + per-customer totals summed by hand; peer check pending | - | correct, peer check pending |
 | C12 | Marieseka | - | 1666490 | - | planned: ines729 | - | td1/c12.sql | missing query in reference-td1.csv |
-| C13 | axel12334556 | 107740 | 107740 | yes | planned: TasB | self: 2nd SQL (birth-date interval / month prefix) + Python on CSV; peer check pending | td1/C13.sql | correct, peer check pending |
-| C14 | axel12334556 | 0 | 0 | yes | planned: TasB | self: 2nd SQL (birth-date interval / month prefix) + Python on CSV; peer check pending | td1/C14.sql | correct, peer check pending |
-| C15 | TasB | 168680 | 168680 | yes | manalhdev | TasB: self-check Python on CSV; manalhdev: independent Python on CSV, no SQL (td1/crosscheck_manal.py), equal | - | complete |
-| C16 | TasB | 376740 | 376740 | yes | manalhdev | TasB: self-check Python on CSV; manalhdev: independent Python on CSV, no SQL (td1/crosscheck_manal.py), equal | - | complete |
+| C13 | axel12334556 | 107740 | 107740 | yes | TasB | axel12334556: self-check 2nd SQL + Python on CSV; TasB: own SQL + independent Python on CSV (refs_TasB.py), equal | td1/C13.sql | complete |
+| C14 | axel12334556 | 0 | 0 | yes | TasB | axel12334556: self-check 2nd SQL + Python on CSV; TasB: own SQL + independent Python on CSV (refs_TasB.py), equal | td1/C14.sql | complete |
+| C15 | TasB | 168680 | 168680 | yes | manalhdev | TasB: self-check Python on CSV; manalhdev: independent Python on CSV, no SQL (td1/crosscheck_manal.py), equal | td1/C15.sql | complete |
+| C16 | TasB | 376740 | 376740 | yes | manalhdev | TasB: self-check Python on CSV; manalhdev: independent Python on CSV, no SQL (td1/crosscheck_manal.py), equal | td1/C16.sql | complete |
 | C17 | manalhdev | 258180 | 258180 | yes | lorentejla (pending) | pending | - | correct, peer check pending |
 | C18 | manalhdev | 62480 | 62480 | yes | lorentejla (pending) | pending | - | correct, peer check pending |
-| C19 | TasB | 1990 | 1990 | yes | manalhdev | TasB: self-check Python on CSV; manalhdev: independent Python on CSV, no SQL (td1/crosscheck_manal.py), equal | - | complete |
+| C19 | TasB | 1990 | 1990 | yes | manalhdev | TasB: self-check Python on CSV; manalhdev: independent Python on CSV, no SQL (td1/crosscheck_manal.py), equal | td1/C19.sql | complete |
 | C20 | Daiki4529 | 1106090 | 1106090 | yes | Marieseka (pending) | pending | td1/c20.sql | correct, peer check pending |
 
 ## Check scripts
@@ -37,24 +37,22 @@ another member with a different method. The published values are used only to co
 |---|---|---|
 | `td1/crosscheck_manal.py` | manalhdev | C15, C16, C19: Python on the CSV files, no SQL |
 | `crosscheck_references_axel.py` | axel12334556 | C02, C13, C14 (own) and C08, C09, C11: second SQL + Python on CSV |
+| `refs_TasB.py` | TasB | C02, C13, C14 (Axel) and own C15, C16, C19: own SQL + Python on CSV |
 | `tools/compare_references.py` | manalhdev | the twenty values against the published table |
 
 ## Still to do
 
 - C01: author adds the query and value to reference-td1.csv (query exists in `td1/c01.sql`, by Marieseka)
-- C02: TasB cross-checks with a different method
 - C03: author adds the query and value to reference-td1.csv (query exists in `td1/C03.sql`, by ines729)
 - C04: Marieseka cross-checks with a different method
 - C05: author adds the query and value to reference-td1.csv (query exists in `td1/c05.sql`, by Marieseka)
 - C06: author adds the query and value to reference-td1.csv
 - C07: author adds the query and value to reference-td1.csv (query exists in `td1/C07.sql`, by ines729)
 - C08: axel12334556 cross-checks with a different method
-- C09: author records the value returned by the query (487980)
+- C09: axel12334556 cross-checks with a different method
 - C10: lorentejla cross-checks with a different method
-- C11: author records the value returned by the query (446690)
+- C11: axel12334556 cross-checks with a different method
 - C12: author adds the query and value to reference-td1.csv (query exists in `td1/c12.sql`, by Marieseka)
-- C13: TasB cross-checks with a different method
-- C14: TasB cross-checks with a different method
 - C17: lorentejla cross-checks with a different method
 - C18: lorentejla cross-checks with a different method
 - C20: Marieseka cross-checks with a different method
