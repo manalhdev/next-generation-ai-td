@@ -42,12 +42,10 @@ def age_on(d):
     return (f"(CAST(substr('{d}', 1, 4) AS INTEGER) - CAST(substr(c.birth_date, 1, 4) AS INTEGER)"
             f" - (substr('{d}', 6, 5) < substr(c.birth_date, 6, 5)))")
 
-# ---------------------------------------------------------------------------
 # A. Reference SQL                         B. Alternative SQL (birth-date interval)
 #    Exactly 25 on D  <=>  born in ]D - 26 years ; D - 25 years]
-# ---------------------------------------------------------------------------
 QUESTIONS = {
-    # --- my questions --------------------------------------------------------
+    # my questions
     "C02": dict(
         mine=True,
         sql=BASE + f"WHERE {age_on('2026-09-25')} = 25",
@@ -70,7 +68,7 @@ QUESTIONS = {
                    "AND substr(o.date, 1, 7) IN ('2026-10', '2026-11')",
         py=dict(products=("a", "b", "c"), period=("2026-10-01 00:00:00", "2026-12-01 00:00:00")),
     ),
-    # --- questions I cross-check ---------------------------------------------
+    # questions I cross-check
     "C08": dict(
         sql=BASE + f"WHERE {age_on('2026-09-24')} = 25",
         alt=BASE + "WHERE c.birth_date > '2000-09-24' AND c.birth_date <= '2001-09-24'",
