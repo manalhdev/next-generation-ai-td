@@ -52,7 +52,7 @@ def merge_traces():
         w.writerows(rows)
 
     jsonl = 0
-    with open(ROOT / "traces-td1.jsonl", "w", encoding="utf-8") as out:
+    with open(ROOT / "traces-td1.jsonl", "w", encoding="utf-8", newline="\n") as out:
         for path in sorted(ROOT.glob("state-*.jsonl")):
             for line in open(path, encoding="utf-8"):
                 if line.strip():
