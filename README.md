@@ -4,7 +4,7 @@ ESILV, Data & AI, year 4. Module *Next-Generation AI* (Trustworthy Generative AI
 
 ## Sub-group
 
-- Sub-group: TODO (number given by the instructor)
+- Sub-group: 1
 - Members (GitHub account): Manal Hassan (manalhdev), axel12334556, ines729, Marieseka, TasB (TazBrks), Daiki4529, lorentejla
 
 | Member | TD 1 work |
@@ -94,8 +94,8 @@ Other files come from the course kit (`KIT-README.md`). `check_access.py` and `s
 | Session | Status |
 |---|---|
 | Preparation | Done, 5/5 models reachable on 2026-10-16 |
-| TD 1 (21 Oct) | 20/20 references equal to the published values; 100 real calls, no access error, 78/100 correct (A 20, B 19, D 14, E 13, C 12); 22 failures explained; five-model summary filled. Report in progress, due 25 Oct 23:59 |
+| TD 1 (21 Oct) | 20/20 references equal to the published values; 100 real calls, no access error, 78/100 correct (A 20, B 19, D 14, E 13, C 12); 22 failures explained; five-model summary filled; report in `reports/td1.md` |
 | TD 2 (18 Nov) | Not started |
 | TD 3 (11 Dec) | Not started |
 
-Open items: `td1/crosscheck_lorentejla.py`, cited as the check of C10, C17, C18, is not in the repository yet; `reports/td1.md` to finish.
+Open items: `td1/crosscheck_lorentejla.py`, cited as the check of C10, C17, C18, is not in the repository yet; three explanations to correct (see `reports/td1.md`, section 4).
