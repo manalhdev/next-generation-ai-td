@@ -70,6 +70,8 @@ python3 skeleton-multi-llm-en.py --run --models openrouter:dots-studio/dots-3-no
 ## TD 2 (no network call)
 
 ```bash
+python3 atelier-vote.py             # our vote_k_sur_n on the four synthetic examples
+python3 tools/td2_vote_table.py     # 2-of-3 against 3-of-5 on the twenty questions (table in reports/td2.md)
 python3 tools/td2_family_rates.py   # TD 1 accuracy per question family -> results/family-rates-td2.md
 python3 atelier-routage.py          # routing simulator adapted to td2/routing-rule.md
 ```
