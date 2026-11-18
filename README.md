@@ -21,7 +21,7 @@ Details per reference: `td1/verifications-td1.md`. Details per session: `reports
 
 ## Environment
 
-- Course pack `2026-10-18-students-1`.
+- Course packs `2026-10-18-students-1` (TD 1) and `2026-11-18-students-5` (TD 2).
 - Database `data/boutique.sqlite`, SHA-256 `0077e235adc2ca647b484e3083c98a6d7cae3ef3655ce366a299caf13398fec2`.
 - Python 3.10 or later, run on macOS and Windows. Free Groq and OpenRouter accounts only, no credits.
 - Models and call parameters are read from `modeles-autorises.json`. TD 1 used the five proposed models, with no replacement.
@@ -67,17 +67,25 @@ python3 skeleton-multi-llm-en.py --run --models openrouter:dots-studio/dots-3-no
 
 `--pause 8` keeps Groq under its free limit of 8,000 tokens per minute.
 
-## TD 2 (no network call)
+## Replay TD 2
+
+Offline, no key needed. One folder per pair in `td2/`, each with its README and two cross-reviews.
 
 ```bash
-python3 tools/td2_family_rates.py   # TD 1 accuracy per question family -> results/family-rates-td2.md
-python3 atelier-routage.py          # routing simulator adapted to td2/routing-rule.md
+python3 atelier-vote.py                                    # vote_k_sur_n on the four synthetic examples
+python3 td2/A-quorum/analyse_votes.py                      # 2-of-3 panel against 3-of-5 quorum, twenty questions
+python3 td2/B-consensus/run_partie_b.py data/boutique.sqlite td2/B-consensus/partie_b.sql   # wrong consensus C09, delta query
+python3 td2/B-consensus/c09_check.py data/boutique.sqlite  # independent checks of C09
+python3 td2/C-routing/family_rates.py                      # TD 1 accuracy per question family
+python3 atelier-routage.py                                 # routing simulator adapted to the rule
 ```
 
 ## Contents
 
 | Path | Content |
 |---|---|
+| `td1/`, `td2/`, `td3/` | One folder per session, each with a README; `td2/A-quorum`, `td2/B-consensus`, `td2/C-routing`: one folder per pair |
+| `reports/` | One report per session: `td1.md`, `td2.md`, `td3.md` |
 | `reference-td1.csv` | The 20 reference queries and values, who wrote and who checked each |
 | `td1/queries-td1.sql` | The same 20 queries in one readable file |
 | `td1/verifications-td1.md` | Who wrote and who checked each reference, method, status, check scripts |
@@ -89,12 +97,11 @@ python3 atelier-routage.py          # routing simulator adapted to td2/routing-r
 | `five-model-summary-en.csv` | Index, prices, access and results per model |
 | `prompts-en.md` | Prompt sent to the models |
 | `prompts-ai-assistance.md` | Prompts used for coding assistance |
-| `reports/` | One report per session |
 | `prep/` | Preparation: access checks, work split, draft reference script |
-| `tools/` | Consolidation and verification scripts |
+| `tools/` | TD 1 consolidation and verification scripts |
 | `kit-docs/` | Assessment, hand-in rules, templates, published TD 1 reference values |
 
-Other files come from the course kit (`KIT-README.md`). `check_access.py` and `skeleton-multi-llm-en.py` were changed only to read keys from `.env`.
+Other files come from the course kit (`KIT-README.md`) and stay at the root, where the course commands run. `check_access.py` was changed only to read keys from `.env`; `skeleton-multi-llm-en.py` also to read keys from `.env`, and in TD 2 to complete `vote_k_sur_n`; `atelier-routage.py` was adapted to the TD 2 routing rule.
 
 ## Status
 
@@ -102,7 +109,7 @@ Other files come from the course kit (`KIT-README.md`). `check_access.py` and `s
 |---|---|
 | Preparation | Done, 5/5 models reachable on 2026-10-16 |
 | TD 1 (21 Oct) | 20/20 references equal to the published values; 100 real calls, no access error, 78/100 correct (A 20, B 19, D 14, E 13, C 12); 22 failures explained; five-model summary filled; report in `reports/td1.md` |
-| TD 2 (18 Nov) | Not started |
+| TD 2 (18 Nov) | `vote_k_sur_n` done; 2-of-3: 15 right, 1 wrong (C09), 4 abstentions, 3-of-5: 15 right, 0 wrong, 5 abstentions; wrong consensus C09 proven on the database; routing rule and simulator adapted; report in `reports/td2.md`; four cross-reviews still to write |
 | TD 3 (11 Dec) | Not started |
 
 Open items: `td1/crosscheck_lorentejla.py`, cited as the check of C10, C17, C18, is not in the repository yet; three explanations to correct (see `reports/td1.md`, section 4).
