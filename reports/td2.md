@@ -1,6 +1,6 @@
 # TD 2 report — The quorum, then the routing rule
 
-Sub-group 1. Session of 18 November 2026. Course pack `2026-11-18-students-5` (code identical to the TD 1 kit; documents updated). No new network call: everything below uses the stored TD 1 traces (`traces-td1.csv`: 100 real cells, 5 models x C01 to C20, one attempt each, all HTTP 200) and `reference-td1.csv`.
+Sub-group 1. Session of 18 November 2026. Course pack `2026-11-18-students-5` (code identical to the TD 1 kit; documents updated). No new network call: everything below uses the stored TD 1 traces ([traces-td1.csv](../traces-td1.csv): 100 real cells, 5 models x C01 to C20, one attempt each, all HTTP 200) and [reference-td1.csv](../reference-td1.csv). The prompts are unchanged since TD 1 ([prompts-en.md](../prompts-en.md)): no model was called in TD 2.
 
 Members (GitHub accounts): Manal Hassan (manalhdev), axel12334556, ines729, Marieseka, TasB (TazBrks), Daiki4529, lorentejla.
 
