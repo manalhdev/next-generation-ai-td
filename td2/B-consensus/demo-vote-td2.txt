@@ -1,0 +1,4 @@
+variante >  : 0
+variante >= : 100
+propositions: [0, 0, 100] | référence : 100
+2-sur-3 : consensus=True valeur=0 voix=2 -> FAUX CONSENSUS

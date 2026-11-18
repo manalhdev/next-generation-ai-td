@@ -1,0 +1,18 @@
+
+C09 (référence 487980)
+   openai/gpt-oss-120b                      487980
+   openai/gpt-oss-20b                       487980
+   cohere/north-mini-code:free              0
+   qwen/qwen3.8-27b                         0
+   dots-studio/dots-3-note-preview:free     47900
+   2-sur-3 panel fixe   -> {'consensus': True, 'value': 0, 'votes': 2, 'models': ['cohere/north-mini-code:free', 'qwen/qwen3.8-27b']}  => FAUX CONSENSUS
+   3-sur-5 quorum       -> {'consensus': False, 'value': None, 'votes': 2, 'models': []}  => ABSTENTION
+
+C10 (référence 558980)
+   openai/gpt-oss-120b                      558980
+   openai/gpt-oss-20b                       558980
+   cohere/north-mini-code:free              0
+   qwen/qwen3.8-27b                         119410
+   dots-studio/dots-3-note-preview:free     0
+   2-sur-3 panel fixe   -> {'consensus': False, 'value': None, 'votes': 1, 'models': []}  => ABSTENTION
+   3-sur-5 quorum       -> {'consensus': False, 'value': None, 'votes': 2, 'models': []}  => ABSTENTION
