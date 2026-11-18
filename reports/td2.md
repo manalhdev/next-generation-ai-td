@@ -86,6 +86,15 @@ Commentary:
 - **C19, right answer gained.** The panel is split three ways (1990, 71640, 83580), so 2-of-3 abstains. 20B and Dots join 120B on the reference, so 3-of-5 reaches 3 votes.
 - All three changes are on questions with an age at a reference date (family F2). On period and product questions (C01, C03 to C07, C12 to C14, C20) both quorums agree, and agree with the reference.
 
+**Margin changes only (same decision)**, from the hand-off note of Tasnim (Pair B), checked against `traces-td1.csv` at the merge; model names written as in the table above, and the last sentence made exact:
+
+- **C06, C11 (sql_invalid stays in n).** Qwen on C06 (`no such function: COALESE`) and Cohere on C11 (`syntax error near "AS"`) do not vote. The 2-of-3 panel passes with **exactly 2 votes out of 3**, with no margin left: one more failure and it would abstain. 3-of-5 passes with 4 votes.
+- **C08.** Cohere is sql_invalid and Dots = 0. The 2-of-3 panel has 2 votes out of 3. The 3-of-5 quorum has exactly 3 out of 5, also at the limit.
+- **C16.** Dots = 1367540 is wrong. The panel has 3 out of 3, the quorum 4 out of 5.
+- **C10, C15, C17.** Abstention in both cases, but the top count goes from 1 to 2 (120B and 20B agree): agreement exists, but not enough to reach k = 3.
+
+No HTTP 429 in this batch. The only cells that do not vote are three invalid SQL statements (`sql_invalid`, 3 cells: Cohere C08, Cohere C11, Qwen C06).
+
 What we draw from it: on our batch, 3-of-5 removes the only wrong consensus of 2-of-3 and adds none, with the same number of right answers (15), for five calls instead of three. An abstention is a visible "we do not know", sent to a reference or a review; a wrong consensus is a silent error. This supports the routing rule of Pair C: 2-of-3 is enough on F1 and F3, 3-of-5 with abstention sent to review on the age families. Limits: twenty questions and one run per cell; a consensus is still not a proof, since on C09 two models were wrong together, and with five models three could be too.
 
 **Check by Pair C at the merge.** Manal Hassan recomputed the twenty decisions independently (`python3 td2/C-routing/analyse_votes.py`, [vote-td2.md](../td2/C-routing/vote-td2.md), [vote-td2.csv](../td2/C-routing/vote-td2.csv)) and ran `atelier-vote.py` ([atelier-vote-td2.txt](../td2/C-routing/atelier-vote-td2.txt)): same decisions. Of the two versions of `vote_k_sur_n` received, the committed one (c01e9a1) is kept: it reads the proposals as objects, which is what `atelier-vote.py` passes. Review: [td2/A-quorum/review-2.md](../td2/A-quorum/review-2.md).
