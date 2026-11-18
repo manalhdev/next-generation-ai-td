@@ -1,18 +1,3 @@
 # Cross-review of Pair C by Pair B
 
-Status: to be written by Pair B (Julia, Tasnim, Marie).
-
-Reviewers:
-Date:
-
-## Checks to run (from the repository root)
-
-- [ ] The rule takes the wrong consensus of C09 into account for the age families (F2).
-- [ ] The check of a value of 0 that you proposed is applied as you intended: `COUNT(*)` of the filtered rows, then the reference query.
-- [ ] `python3 td2/C-routing/c09_check.py data/boutique.sqlite`: the figures match the outputs of your `partie_b.sql`.
-- [ ] Read the branch order of `choose` in `atelier-routage.py` and the priority analysis in `routing-rule.md`: when should an available subscription not be used before a deferral?
-- [ ] `python3 atelier-routage.py --scenario "F2 urgent, no budget"`: the decision and its reason are the expected ones.
-
-## Findings
-
-## Decision
+Status (Manal Hassan, 18 November 2026): no separate review by Pair B. The review of Pair C written by a member of Pair B is the one by Tasnim (TasB), in [review-1.md](review-1.md), which she wrote on behalf of Pair A because Axel became unavailable. Julia and Marie did not write another one.

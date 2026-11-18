@@ -112,7 +112,7 @@ Other files come from the course kit (`KIT-README.md`) and stay at the root, whe
 |---|---|
 | Preparation | Done, 5/5 models reachable on 2026-10-16 |
 | TD 1 (21 Oct) | 20/20 references equal to the published values; 100 real calls, no access error, 78/100 correct (A 20, B 19, D 14, E 13, C 12); 22 failures explained; five-model summary filled; report in `reports/td1.md` |
-| TD 2 (18 Nov) | `vote_k_sur_n` done; 2-of-3: 15 right, 1 wrong (C09), 4 abstentions, 3-of-5: 15 right, 0 wrong, 5 abstentions; wrong consensus C09 proven on the database; routing rule and simulator adapted; report in `reports/td2.md`; one cross-review still to write (Pair B on Pair C), two written by Tasnim on behalf of Pair A |
+| TD 2 (18 Nov) | `vote_k_sur_n` done; 2-of-3: 15 right, 1 wrong (C09), 4 abstentions, 3-of-5: 15 right, 0 wrong, 5 abstentions; wrong consensus C09 proven on the database; routing rule and simulator adapted; report in `reports/td2.md`; cross-reviews: Tasnim wrote three (two on behalf of Pair A, to be confirmed), Manal Hassan two; no separate review of Pair C by Pair B |
 | TD 3 (11 Dec) | Not started |
 
 Open items: `td1/crosscheck_lorentejla.py`, cited as the check of C10, C17, C18, is not in the repository yet; three explanations to correct (see `reports/td1.md`, section 4).
