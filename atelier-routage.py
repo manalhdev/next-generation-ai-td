@@ -57,12 +57,16 @@ def td1_rates():
     return rates
 
 
+ZERO_CHECK = "a value of 0: COUNT(*) of the filtered rows, then the reference query if no row is kept"
+
+
 def checks_for(use, family):
     if use == "payout":
         return "reference query check and human review"
     if use == "customer":
-        return "3-of-5 quorum, abstention sent to human review" if family in ("F2", "F2b") else "2-of-3 quorum"
-    return "none"
+        quorum = "3-of-5 quorum, abstention sent to human review" if family in ("F2", "F2b") else "2-of-3 quorum"
+        return f"{quorum}; {ZERO_CHECK}"
+    return f"none, except {ZERO_CHECK}"
 
 
 def evidence(rates, family, resource):

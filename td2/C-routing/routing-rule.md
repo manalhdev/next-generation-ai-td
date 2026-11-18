@@ -6,7 +6,7 @@ Built only from the 100 real TD 1 cells: rates in [family-rates-td2.md](family-r
 
 | Use | Consequence of a wrong figure | Checking principle |
 |---|---|---|
-| Internal dashboard | Seen internally, corrected later | `none` only with a model at 100 % on the family in TD 1 |
+| Internal dashboard | Seen internally, corrected later | `none` only with a model at 100 % on the family in TD 1, except for a value of 0 |
 | Figure shown to a customer | Wrong information to a customer, loss of trust | Quorum always |
 | Amount paid out | Money paid on a wrong amount | Deterministic reference query and human review, always |
 
@@ -26,11 +26,13 @@ All five TD 1 routes are free (price 0: Groq Free plan for gpt-oss-120b, gpt-oss
 
 Why a 3-of-5 quorum and not the 2-of-3 panel on the age families: in TD 1, on C09, Cohere and Qwen, two members of the fixed panel, both returned the same wrong value 0 (reference 487980). On the age families, errors are frequent and can coincide, so two votes out of three are not enough. On F1 and F3 the panel members were right on every cell except Qwen on C06, where the error was an invalid query (detected, it casts no vote), so 2-of-3 is enough there.
 
+**A value of 0 (input of Pair B).** For the dashboard and the customer uses, a 0 is delivered only after a `COUNT(*)` of the rows kept by the filter of the query, a local read-only query with no model call. If the filter keeps no row, the 0 comes from an empty set and must also be returned by the reference query; otherwise the decision is an abstention sent to review. The count alone does not decide: on `data/boutique.sqlite`, the seven wrong zeros of TD 1 (C02 20B, C08 Dots, C09 Cohere and Qwen, C10 Cohere and Dots, C15 Qwen) and the true zeros of C06 and C14 all come from a filter that keeps no row. The reference query separates them: it returns 0 on C06 and C14 only. On C09, this check would have stopped the wrong consensus 0 of the 2-of-3 panel. An amount paid out already goes through the reference query.
+
 ## Scenario outcomes (simulator, after adaptation)
 
 | ID | Situation | Selected action | Reason tied to the rule | Evidence or explicit assumption |
 |---|---|---|---|---|
-| R1 | Ordinary question, preferred route available (F1 dashboard) | run gpt-oss-20b, no check | first model of F1, 100 % on F1 | 6/6 on C01, C04, C05, C06, C07, C20 |
+| R1 | Ordinary question, preferred route available (F1 dashboard) | run gpt-oss-20b, no check except for a value of 0 | first model of F1, 100 % on F1 | 6/6 on C01, C04, C05, C06, C07, C20 |
 | R2 | Preferred provider unavailable (F1, gpt-oss-20b down) | run Cohere | next eligible route of F1 | 6/6 on the same cells; availability is an assumption of the scenario |
 | R3 | Deferrable request, free quota exhausted (F2, Groq 120B exhausted, refill in 60 min) | defer 60 min, recheck at wake-up | only gpt-oss-120b is eligible on F2, the refill comes before the deadline | 8/8 on the F2 cells; refill time is a scenario assumption, not a measurement |
 | R4 | Urgent request, no adequate route within the budget (F2, budget 0) | abstain | no free eligible route in time and the paid route costs more than the budget | gpt-oss-120b, the only eligible model, 8/8 on the F2 cells; paid cost 0.00021 USD from the portfolio price and TD 1 median tokens |
@@ -42,7 +44,7 @@ Outputs before adaptation: [routing-before.txt](routing-before.txt) (supplied re
 
 - `RESOURCES`: the three fictitious resources are replaced by the five TD 1 routes (free) and the paid route of gpt-oss-120b.
 - Eligibility: the abstract `level >= difficulty` test is replaced by "correct on every TD 1 cell of the family", read from `model-question-comparison-en.csv`; each reason cites the cells.
-- `checks`: depend on the use (dashboard, customer, payout) and on the family, as in the table above.
+- `checks`: depend on the use (dashboard, customer, payout) and on the family, as in the table above, plus the check of a value of 0 for the dashboard and customer uses.
 - The order of the branches is unchanged: included capacity, then deferral, then paid route, then abstention. Among eligible free routes, the order follows the rule (20B, Cohere, Dots, 120B, Qwen) instead of `(allocation, level, id)`.
 - Abstention: the reason lists why each eligible route is rejected (unavailable, refill after the deadline, cost over the budget) and cites the TD 1 cells of the eligible model, like every other decision.
 

@@ -190,7 +190,7 @@ C10 (age at the time of the order), reference 558980. Cohere and Dots both retur
 
 - On the age family F2, two members of the fixed panel are wrong together: the 2-of-3 panel does not protect this family (input of the routing rule of Pair C).
 - The 3-of-5 quorum avoids the error on C09 but abstains: it does not replace a correct answer, so an abstention must go to a reference query or a human review.
-- A consensus on 0 should be treated as suspect when a non-zero figure is expected: count the filtered rows (`COUNT(*)`) or keep `NULL` without `COALESCE`; an empty set over a non-empty population leads to abstention or review.
+- A consensus on 0 should be treated as suspect when a non-zero figure is expected: count the filtered rows (`COUNT(*)`) or keep `NULL` without `COALESCE`; an empty set over a non-empty population leads to abstention or review. This check is now part of the routing rule (section 4), with the reference query to confirm an empty set, because the true zeros of C06 and C14 also come from an empty filter.
 - The errors of the models are not independent (same prompt, same schema, same date trap), while a quorum assumes independent errors.
 
 ## 4. Step 3 — The routing rule (Pair C)
@@ -201,9 +201,10 @@ C10 (age at the time of the order), reference 558980. Cohere and Dots both retur
 
 Main findings:
 
-- Period (F1) and product (F3) questions: four or five models are at 100 % in TD 1, so gpt-oss-20b goes first and a dashboard needs no check.
+- Period (F1) and product (F3) questions: four or five models are at 100 % in TD 1, so gpt-oss-20b goes first and a dashboard needs no check, except for a value of 0.
 - Every question with an age at a reference date (8 cells): only gpt-oss-120b is at 100 % (8/8); gpt-oss-20b fails C02 with a silent wrong value, Qwen, Cohere and Dots fail 4, 7 and 6 of them.
 - The 2-of-3 panel is not enough on the age families: on C09, two panel members (Cohere and Qwen) returned the same wrong value 0. Customer figures on these families use a 3-of-5 quorum, payouts a reference query and a human review.
+- A value of 0 is checked before delivery, as Pair B proposed: a `COUNT(*)` of the filtered rows, then the reference query when no row is kept. In TD 1, the seven wrong zeros and the true zeros of C06 and C14 all come from a filter that keeps no row, so the count alone does not decide; the reference query does.
 
 **Priority order of the supplied `choose`.** The branches are tested in a fixed order: available included capacity (`cash == 0`, which covers a free route and an already paid subscription with `allocation > 0`), then deferral to an exhausted free route that refills before `deadline_minutes` when the request can wait, then a paid route within the budget, then abstention. An available subscription is therefore selected before any deferral: it spends no new money, it answers now, and a deferral is uncertain (a reset time is only an announcement, availability must be measured again at wake-up, the deadline can be missed). The priority should be reversed when the subscription capacity is scarce: an allocation for the period, or a cap shared by the team, that must be kept for requests that cannot wait. Then a request that can wait, with a reliable free refill before its deadline, should defer; in the code, the `waiting` branch would be tested first when `can_wait` is true and the remaining allocation is under a reserve threshold. Our rule has no subscription: on F2, the simulator waits for the free Groq refill before paying the OpenRouter route.
 
@@ -238,6 +239,5 @@ The three deliverables were merged by Manal Hassan; the merge choices (which vot
 ## 8. Next steps
 
 - TD 3: cost of each configuration (single model, 2-of-3, 3-of-5, reference check) for the uses of the routing rule.
-- Add to the routing rule the check proposed by Pair B: a consensus on 0 triggers a `COUNT(*)` of the filtered rows.
 - A second member reruns the step 2 scripts on another machine.
 - Pairs A and B write the four missing cross-reviews (section 5).

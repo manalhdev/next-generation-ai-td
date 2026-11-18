@@ -27,4 +27,4 @@ python3 td2/C-routing/c09_check.py data/boutique.sqlite
 
 ## Result
 
-Period and product questions: four or five models are at 100 % in TD 1, so gpt-oss-20b goes first and a dashboard needs no check. Questions with an age at a reference date: only gpt-oss-120b is at 100 % (8/8); a figure shown to a customer uses a 3-of-5 quorum, an amount paid out a reference query and a human review. Summary: [reports/td2.md](../../reports/td2.md), section 4.
+Period and product questions: four or five models are at 100 % in TD 1, so gpt-oss-20b goes first and a dashboard needs no check, except for a value of 0. Questions with an age at a reference date: only gpt-oss-120b is at 100 % (8/8); a figure shown to a customer uses a 3-of-5 quorum, an amount paid out a reference query and a human review. A value of 0 is delivered only after a `COUNT(*)` of the filtered rows and, if no row is kept, the reference query (input of Pair B). Summary: [reports/td2.md](../../reports/td2.md), section 4.
