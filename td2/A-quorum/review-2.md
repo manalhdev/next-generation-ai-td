@@ -22,6 +22,8 @@ Reviewed: `vote_k_sur_n` as committed in c01e9a1 (Daiki4529), and the Pair A han
 - The table script of the hand-off note is not used: the table is recomputed by [td2/C-routing/analyse_votes.py](../C-routing/analyse_votes.py), written at the merge, which calls `vote_k_sur_n` through `atelier-vote.py`, as the statement asks for the 3-of-5 quorum.
 - Report text: "every failure is an invalid SQL statement" became "the only cells that do not vote are three invalid SQL statements (Cohere C08 and C11, Qwen C06)"; symbols replaced by words.
 
+Update after the merge: Pair A committed [td2_vote_table.py](td2_vote_table.py), which calls `vote_k_sur_n` from `skeleton-multi-llm-en.py`, and rewrote section 2 of the report. Run on 18 November: its twenty rows are identical to the report table and to `td2/C-routing/analyse_votes.py`.
+
 ## Decision
 
 Accepted with the changes above.
