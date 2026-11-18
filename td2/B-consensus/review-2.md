@@ -22,7 +22,7 @@ Reviewed: the two Pair B deliverables, a package with the SQL, the scripts and t
 ## Changes made at the merge
 
 - The executed outputs replace the expected values of the package; the structure and the delta query of the package are kept.
-- `c09_check.py`, cited by the package, was not received: it was rewritten with the same purpose (delta query in another formulation, `COUNT(*)` of the faulty clauses, recomputation in Python without SQL). Pair B can replace it with its original.
+- `c09_check.py`, cited by the package, was not received: it was rewritten with the same purpose in [td2/C-routing/c09_check.py](../C-routing/c09_check.py) (delta query in another formulation, `COUNT(*)` of the faulty clauses, recomputation in Python without SQL). Pair B can add its original to its own folder.
 - Symbols replaced by words in the report text. The SQL and the scripts are kept as delivered, with their French comments.
 
 ## Decision

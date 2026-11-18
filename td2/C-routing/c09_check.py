@@ -1,6 +1,6 @@
-"""TD 2 step 2: executable check of the wrong consensus on C09.
+"""TD 2, check of step 2 by Pair C at the merge: the wrong consensus on C09 (the c09_check.py cited by Pair B was not received).
 
-Usage (from the repository root):  python3 td2/B-consensus/c09_check.py data/boutique.sqlite
+Usage (from the repository root):  python3 td2/C-routing/c09_check.py data/boutique.sqlite
 1. Delta query per customer: revenue of the reference window ]2000-09-26, 2001-09-26] and the part of it
    kept by the WHERE clauses of Cohere and Qwen, as returned in traces-td1.csv.
 2. Rows kept by the two faulty WHERE clauses on the whole database (none are wrongly added).

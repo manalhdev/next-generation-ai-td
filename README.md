@@ -75,9 +75,9 @@ Offline, no key needed. One folder per pair in `td2/`, each with its README and 
 
 ```bash
 python3 atelier-vote.py                                    # vote_k_sur_n on the four synthetic examples
-python3 td2/A-quorum/analyse_votes.py                      # 2-of-3 panel against 3-of-5 quorum, twenty questions
+python3 td2/C-routing/analyse_votes.py                     # 2-of-3 panel against 3-of-5 quorum, twenty questions
 python3 td2/B-consensus/run_partie_b.py data/boutique.sqlite td2/B-consensus/partie_b.sql   # wrong consensus C09, delta query
-python3 td2/B-consensus/c09_check.py data/boutique.sqlite  # independent checks of C09
+python3 td2/C-routing/c09_check.py data/boutique.sqlite    # independent checks of C09
 python3 td2/C-routing/family_rates.py                      # TD 1 accuracy per question family
 python3 atelier-routage.py                                 # routing simulator adapted to the rule
 ```

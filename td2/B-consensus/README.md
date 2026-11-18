@@ -20,17 +20,15 @@ Full analysis: [reports/td2.md](../../reports/td2.md), section 3.
 | [partie_b.sql](partie_b.sql) | Reference, the two model queries, clause tests, delta query per customer, total check, Dots subset |
 | [run_partie_b.py](run_partie_b.py) | Runs `partie_b.sql` read-only; output [partie-b-output.txt](partie-b-output.txt) |
 | [compte_votes.py](compte_votes.py) | Independent vote count for C09 and C10, to compare with `vote_k_sur_n`; output [compte-votes-td2.txt](compte-votes-td2.txt) |
-| [c09_check.py](c09_check.py) | Delta query in another formulation, rows kept by the faulty clauses, recomputation in Python without SQL; output [c09-check-td2.txt](c09-check-td2.txt) |
 | [demo_vote.py](demo_vote.py) | DEMO-VOTE: constructed teaching data on a one-row toy table, not an analysis case; output [demo-vote-td2.txt](demo-vote-td2.txt) |
 | [review-1.md](review-1.md), [review-2.md](review-2.md) | Cross-reviews by Pair A and Pair C |
 
-`partie_b.sql`, `run_partie_b.py`, `compte_votes.py` and `demo_vote.py` are kept as delivered by Pair B, with their French comments. `c09_check.py` was not in the package received: it was rewritten at the merge with the same purpose (see [review-2.md](review-2.md)).
+`partie_b.sql`, `run_partie_b.py`, `compte_votes.py` and `demo_vote.py` are kept as delivered by Pair B, with their French comments. The `c09_check.py` cited by the package was not received: the independent checks of C09 written by Pair C at the merge are in [td2/C-routing/c09_check.py](../C-routing/c09_check.py).
 
 ## Replay (from the repository root)
 
 ```bash
 python3 td2/B-consensus/run_partie_b.py data/boutique.sqlite td2/B-consensus/partie_b.sql
 python3 td2/B-consensus/compte_votes.py traces-td1.csv
-python3 td2/B-consensus/c09_check.py data/boutique.sqlite
 python3 td2/B-consensus/demo_vote.py
 ```
