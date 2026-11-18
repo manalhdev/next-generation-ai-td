@@ -1,6 +1,6 @@
 # Cross-review of Pair A by Pair B
 
-Status: to be written by Pair B.
+Status: to be written by Pair B (Julia, Tasnim, Marie).
 
 Reviewers:
 Date:

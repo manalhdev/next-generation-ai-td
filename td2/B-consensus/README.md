@@ -1,6 +1,6 @@
 # Pair B — Step 2: the wrong consensus
 
-Members: to be completed.
+Members: Julia (lorentejla), Tasnim (TasB), Marie (Marieseka).
 
 ## Case
 

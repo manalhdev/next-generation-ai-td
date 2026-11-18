@@ -229,9 +229,9 @@ Before the report is finalised, each pair walks the other members through its co
 
 | Pair | Members | Step |
 |---|---|---|
-| A | Daiki4529, to be completed | 1 |
-| B | to be completed | 2 |
-| C | Manal Hassan, to be completed | 3 |
+| A | Jonas (Daiki4529), Axel (axel12334556) | 1. Vote |
+| B | Julia (lorentejla), Tasnim (TasB), Marie (Marieseka) | 2. Wrong consensus |
+| C | Ines (ines729), Manal Hassan (manalhdev) | 3. Routing rule |
 
 The three deliverables were merged by Manal Hassan; the merge choices (which vote version is kept, which delta query, the executed outputs) are explained in the steps above. AI-assisted code and its prompts: [prompts-ai-assistance.md](../prompts-ai-assistance.md).
 
@@ -240,4 +240,4 @@ The three deliverables were merged by Manal Hassan; the merge choices (which vot
 - TD 3: cost of each configuration (single model, 2-of-3, 3-of-5, reference check) for the uses of the routing rule.
 - Add to the routing rule the check proposed by Pair B: a consensus on 0 triggers a `COUNT(*)` of the filtered rows.
 - A second member reruns the step 2 scripts on another machine.
-- Pairs A and B write the four missing cross-reviews (section 5) and complete the members of each pair (section 7).
+- Pairs A and B write the four missing cross-reviews (section 5).

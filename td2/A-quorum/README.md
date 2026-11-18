@@ -1,6 +1,6 @@
 # Pair A — Step 1: the k-of-n vote
 
-Members: Daiki4529, to be completed.
+Members: Jonas (Daiki4529), Axel (axel12334556).
 
 ## Work
 

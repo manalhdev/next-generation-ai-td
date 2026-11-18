@@ -1,6 +1,6 @@
 # Pair C — Step 3: the routing rule
 
-Members: Manal Hassan, to be completed.
+Members: Ines (ines729), Manal Hassan (manalhdev).
 
 ## Work
 

@@ -17,6 +17,8 @@ ESILV, Data & AI, year 4. Module *Next-Generation AI* (Trustworthy Generative AI
 | Daiki4529 | references C04, C20; cross-check of C03, C06, C07; trace consolidation |
 | lorentejla | references C08, C09, C11; cross-check of C10, C17, C18; five-model summary |
 
+TD 2 pairs: A, vote (Daiki4529, axel12334556); B, wrong consensus (lorentejla, TasB, Marieseka); C, routing rule (ines729, manalhdev).
+
 Details per reference: `td1/verifications-td1.md`. Details per session: `reports/`.
 
 ## Environment
