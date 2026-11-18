@@ -232,6 +232,8 @@ Before the report is finalised, each pair walks the other members through its co
 | B, consensus | [by Pair A](../td2/B-consensus/review-1.md): to be written | [by Pair C](../td2/B-consensus/review-2.md): accepted, every figure rerun on the database |
 | C, routing | [by Pair A](../td2/C-routing/review-1.md): to be written | [by Pair B](../td2/C-routing/review-2.md): to be written |
 
+Pair B also checked its own Step 2: [td2/B-consensus/internal-check.md](../td2/B-consensus/internal-check.md) (Julia, Marie).
+
 ## 6. Limits
 
 - Twenty questions and one attempt per cell: a hypothesis for this batch, not a general error rate, a permanent ranking or a quorum guarantee.

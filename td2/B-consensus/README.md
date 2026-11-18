@@ -21,6 +21,7 @@ Full analysis: [reports/td2.md](../../reports/td2.md), section 3.
 | [run_partie_b.py](run_partie_b.py) | Runs `partie_b.sql` read-only; output [partie-b-output.txt](partie-b-output.txt) |
 | [compte_votes.py](compte_votes.py) | Independent vote count for C09 and C10, to compare with `vote_k_sur_n`; output [compte-votes-td2.txt](compte-votes-td2.txt) |
 | [demo_vote.py](demo_vote.py) | DEMO-VOTE: constructed teaching data on a one-row toy table, not an analysis case; output [demo-vote-td2.txt](demo-vote-td2.txt) |
+| [internal-check.md](internal-check.md) | Check of Step 2 by Julia and Marie (Pair B), not a cross-review |
 | [review-1.md](review-1.md), [review-2.md](review-2.md) | Cross-reviews by Pair A and Pair C |
 
 `partie_b.sql`, `run_partie_b.py`, `compte_votes.py` and `demo_vote.py` are kept as delivered by Pair B, with their French comments. The `c09_check.py` cited by the package was not received: the independent checks of C09 written by Pair C at the merge are in [td2/C-routing/c09_check.py](../C-routing/c09_check.py).
