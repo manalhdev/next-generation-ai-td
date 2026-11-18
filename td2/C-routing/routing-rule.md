@@ -33,7 +33,7 @@ Why a 3-of-5 quorum and not the 2-of-3 panel on the age families: in TD 1, on C0
 | R1 | Ordinary question, preferred route available (F1 dashboard) | run gpt-oss-20b, no check | first model of F1, 100 % on F1 | 6/6 on C01, C04, C05, C06, C07, C20 |
 | R2 | Preferred provider unavailable (F1, gpt-oss-20b down) | run Cohere | next eligible route of F1 | 6/6 on the same cells; availability is an assumption of the scenario |
 | R3 | Deferrable request, free quota exhausted (F2, Groq 120B exhausted, refill in 60 min) | defer 60 min, recheck at wake-up | only gpt-oss-120b is eligible on F2, the refill comes before the deadline | 8/8 on the F2 cells; refill time is a scenario assumption, not a measurement |
-| R4 | Urgent request, no adequate route within the budget (F2, budget 0) | abstain | no free eligible route in time and the paid route costs more than the budget | paid cost 0.00021 USD from the portfolio price and TD 1 median tokens |
+| R4 | Urgent request, no adequate route within the budget (F2, budget 0) | abstain | no free eligible route in time and the paid route costs more than the budget | gpt-oss-120b, the only eligible model, 8/8 on the F2 cells; paid cost 0.00021 USD from the portfolio price and TD 1 median tokens |
 | R5 | High consequence of error, answers agree (F2, amount paid out) | run gpt-oss-120b, reference check and human review | agreement can be a wrong consensus (C09: 0 returned by Cohere and Qwen) | TD 1 values on C09 |
 
 Outputs before adaptation: [routing-before.txt](routing-before.txt) (supplied resources). After: [routing-after.txt](routing-after.txt) (`python3 atelier-routage.py`, run from the repository root).
@@ -44,6 +44,7 @@ Outputs before adaptation: [routing-before.txt](routing-before.txt) (supplied re
 - Eligibility: the abstract `level >= difficulty` test is replaced by "correct on every TD 1 cell of the family", read from `model-question-comparison-en.csv`; each reason cites the cells.
 - `checks`: depend on the use (dashboard, customer, payout) and on the family, as in the table above.
 - The order of the branches is unchanged: included capacity, then deferral, then paid route, then abstention. Among eligible free routes, the order follows the rule (20B, Cohere, Dots, 120B, Qwen) instead of `(allocation, level, id)`.
+- Abstention: the reason lists why each eligible route is rejected (unavailable, refill after the deadline, cost over the budget) and cites the TD 1 cells of the eligible model, like every other decision.
 
 ## Priority order in the supplied `choose`
 
