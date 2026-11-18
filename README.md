@@ -67,6 +67,13 @@ python3 skeleton-multi-llm-en.py --run --models openrouter:dots-studio/dots-3-no
 
 `--pause 8` keeps Groq under its free limit of 8,000 tokens per minute.
 
+## TD 2 (no network call)
+
+```bash
+python3 tools/td2_family_rates.py   # TD 1 accuracy per question family -> results/family-rates-td2.md
+python3 atelier-routage.py          # routing simulator adapted to td2/routing-rule.md
+```
+
 ## Contents
 
 | Path | Content |
