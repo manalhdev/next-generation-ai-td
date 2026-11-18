@@ -57,12 +57,16 @@ def td1_rates():
     return rates
 
 
+ZERO_CHECK = "a value of 0: COUNT(*) of the filtered rows, then the reference query if no row is kept"
+
+
 def checks_for(use, family):
     if use == "payout":
         return "reference query check and human review"
     if use == "customer":
-        return "3-of-5 quorum, abstention sent to human review" if family in ("F2", "F2b") else "2-of-3 quorum"
-    return "none"
+        quorum = "3-of-5 quorum, abstention sent to human review" if family in ("F2", "F2b") else "2-of-3 quorum"
+        return f"{quorum}; {ZERO_CHECK}"
+    return f"none, except {ZERO_CHECK}"
 
 
 def evidence(rates, family, resource):
@@ -107,8 +111,24 @@ def choose(request, resources):
         return {"action": "run", "resource": chosen["id"], "cash": chosen["cash"], "checks": checks,
                 "reason": "no free eligible route in time; paid route of the same model within the budget; "
                           + evidence(rates, family, chosen)}
-    return {"action": "abstain", "resource": None, "cash": 0, "checks": checks,
-            "reason": f"no eligible route for {family} within deadline and budget"}
+    if not eligible:
+        reason = f"no model correct on every TD 1 cell of {family} ({', '.join(FAMILIES[family])})"
+    else:
+        rejected = []
+        for r in eligible:
+            if r["cash"] > 0:
+                why = f"costs {r['cash']} USD, over the budget of {request['budget']}" if r["available"] else "unavailable"
+            elif r["reset_minutes"] is None:
+                why = "unavailable, no announced refill"
+            elif r["reset_minutes"] > request["deadline_minutes"]:
+                why = f"unavailable, refill in {r['reset_minutes']} min, after the {request['deadline_minutes']}-min deadline"
+            else:
+                why = f"unavailable, refill in {r['reset_minutes']} min, and the request cannot wait"
+            rejected.append(f"{r['id']} {why}")
+        models = sorted({r["model"] for r in eligible}, key=PREFERENCE.index)
+        reason = (f"no eligible route for {family} within deadline and budget: " + "; ".join(rejected) + "; "
+                  + "; ".join(evidence(rates, family, {"model": m}) for m in models))
+    return {"action": "abstain", "resource": None, "cash": 0, "checks": checks, "reason": reason}
 
 
 def scenarios():
