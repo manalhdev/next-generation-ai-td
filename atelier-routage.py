@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """TD 2 and TD 3: read the decisions of a routing rule, then adapt it to your own.
 
-Adapted by sub-group 1 to its TD 2 routing rule (td2/routing-rule.md). No API call, no key.
+Adapted by sub-group 1 to its TD 2 routing rule (td2/C-routing/routing-rule.md). No API call, no key.
 
 Resources are the five TD 1 models and the paid route of gpt-oss-120b. A resource is eligible for a
 question family only if its model was correct on every TD 1 cell of that family
