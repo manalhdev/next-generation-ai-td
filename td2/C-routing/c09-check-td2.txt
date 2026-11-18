@@ -1,0 +1,13 @@
+1. Delta query: customer_id | birth_date | order_lines | ref_cents | cohere_cents | qwen_cents | missed
+   C001 | 2001-09-25 | 18 | 135000 | 0 | 0 | 135000
+   C002 | 2001-09-24 | 6 | 25920 | 0 | 0 | 25920
+   C003 | 2001-09-26 | 6 | 47900 | 0 | 0 | 47900
+   C007 | 2000-11-30 | 18 | 118740 | 0 | 0 | 118740
+   C008 | 2001-05-15 | 11 | 99090 | 0 | 0 | 99090
+   C009 | 2001-03-10 | 9 | 61330 | 0 | 0 | 61330
+   TOTAL |  | 68 | 487980 | 0 | 0 | 487980
+2. Rows kept by the faulty WHERE clauses on the whole database
+   Cohere: 0 row(s)
+   Qwen: 0 row(s)
+3. Recomputation in Python on the CSV files
+   revenue of the customers aged 25 on 2026-09-26: 487980
