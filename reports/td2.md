@@ -228,7 +228,7 @@ Before the report is finalised, each pair walks the other members through its co
 
 | Pair reviewed | review-1.md | review-2.md |
 |---|---|---|
-| A, quorum | [by Pair B](../td2/A-quorum/review-1.md): to be written | [by Pair C](../td2/A-quorum/review-2.md): accepted, the vote version that reads objects is kept |
+| A, quorum | [by Pair B](../td2/A-quorum/review-1.md), Tasnim: the logic keeps to the contract; one point to verify, settled, and two minor details | [by Pair C](../td2/A-quorum/review-2.md): accepted, the vote version that reads objects is kept |
 | B, consensus | [by Pair A](../td2/B-consensus/review-1.md): to be written | [by Pair C](../td2/B-consensus/review-2.md): accepted, every figure rerun on the database |
 | C, routing | [by Pair A](../td2/C-routing/review-1.md): to be written | [by Pair B](../td2/C-routing/review-2.md): to be written |
 
@@ -252,4 +252,4 @@ The three deliverables were merged by Manal Hassan; the merge choices (which vot
 
 - TD 3: cost of each configuration (single model, 2-of-3, 3-of-5, reference check) for the uses of the routing rule.
 - A second member reruns the step 2 scripts on another machine.
-- Pairs A and B write the four missing cross-reviews (section 5).
+- Pairs A and B write the three missing cross-reviews (section 5).
