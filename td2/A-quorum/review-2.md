@@ -2,7 +2,7 @@
 
 Reviewer: Manal Hassan (Pair C), 18 November 2026, while merging the three deliverables. Checks run with Claude Code ([prompts-ai-assistance.md](../../prompts-ai-assistance.md)).
 
-Reviewed: `vote_k_sur_n` as committed in c01e9a1 (Daiki4529), and the Pair A hand-off note (vote code, table script, report text for Step 1).
+Reviewed: `vote_k_sur_n` as committed in c01e9a1 (Daiki4529), and the hand-off note `HANDOFF-TD2.md`, which Tasnim (Pair B) calls her file in her review ([review-1.md](review-1.md)): another version of the method, a table script and a draft text for Steps 1 and 2.
 
 ## Checks run
 

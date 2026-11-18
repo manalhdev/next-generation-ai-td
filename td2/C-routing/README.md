@@ -11,7 +11,7 @@ Members: Ines (ines729), Manal Hassan (manalhdev).
 
 ## Checks of Steps 1 and 2, made by Manal Hassan at the merge
 
-- [analyse_votes.py](analyse_votes.py): recomputes the twenty decisions of Step 1 with `vote_k_sur_n`, on the proposals built by `atelier-vote.py`; outputs [vote-td2.md](vote-td2.md) and [vote-td2.csv](vote-td2.csv), same decisions as the Pair A table. Written when the script of the Pair A hand-off note still counted the votes itself; Pair A then committed its own [td2_vote_table.py](../A-quorum/td2_vote_table.py), which calls `vote_k_sur_n` and gives the same twenty decisions.
+- [analyse_votes.py](analyse_votes.py): recomputes the twenty decisions of Step 1 with `vote_k_sur_n`, on the proposals built by `atelier-vote.py`; outputs [vote-td2.md](vote-td2.md) and [vote-td2.csv](vote-td2.csv), same decisions as the Pair A table. Written when the only table script received, in the hand-off note of Tasnim (Pair B), still counted the votes itself; Pair A then committed its own [td2_vote_table.py](../A-quorum/td2_vote_table.py), which calls `vote_k_sur_n` and gives the same twenty decisions.
 - [atelier-vote-td2.txt](atelier-vote-td2.txt): output of `atelier-vote.py` with the method of Pair A: the four synthetic examples, then the real traces of C02, C09 and C19.
 - [c09_check.py](c09_check.py): independent checks of C09 (delta query in another formulation, rows kept by the faulty clauses, recomputation in Python without SQL); output [c09-check-td2.txt](c09-check-td2.txt). Written because the `c09_check.py` cited by Pair B was not received.
 
